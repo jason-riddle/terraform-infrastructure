@@ -1,0 +1,8 @@
+.devenv
+.devenv.flake.nix
+.terraform
+.terraform.lock.hcl
+.vagrant
+terraform.tfstate
+
+.DS_Store
