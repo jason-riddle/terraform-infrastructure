@@ -20,14 +20,6 @@ resource "hcp_vault_cluster" "vault" {
 #   count = var.enabled ? 1 : 0
 
 #   cluster_id = hcp_vault_cluster.vault[0].cluster_id
-
-#   # depends_on = [
-#   #   hcp_vault_cluster.vault[0]
-#   # ]
-
-#   # lifecycle {
-#   #   prevent_destroy = true
-#   # }
 # }
 
 ## Output
