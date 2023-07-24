@@ -25,3 +25,6 @@ output: init
 
 console: init
 	devenv shell -- terraform console
+
+ls:
+	devenv shell -- terraform state list
