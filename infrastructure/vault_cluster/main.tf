@@ -40,7 +40,7 @@ resource "hcp_vault_cluster_admin_token" "cluster_token" {
 
 ## Output
 
-# output "vault_cluster_token" {
-#   value     = hcp_vault_cluster_admin_token.cluster_token[0].token
-#   sensitive = true
-# }
+output "vault_cluster_token" {
+  value     = hcp_vault_cluster_admin_token.cluster_token[0].token
+  sensitive = true
+}
