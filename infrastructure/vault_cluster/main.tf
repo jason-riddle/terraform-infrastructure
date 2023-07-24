@@ -29,6 +29,11 @@ output "vault_cluster_id" {
   sensitive = true
 }
 
+output "vault_cluster_public_endpoint_url" {
+  value     = hcp_vault_cluster.vault.vault_public_endpoint_url
+  sensitive = true
+}
+
 # output "vault_cluster_token" {
 #   value     = hcp_vault_cluster_admin_token.cluster_token
 #   sensitive = true
