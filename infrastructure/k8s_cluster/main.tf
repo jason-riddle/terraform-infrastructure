@@ -20,10 +20,6 @@ resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
     size       = "s-1vcpu-2gb"
     node_count = 1
   }
-
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
 }
 
 ## Output
