@@ -74,54 +74,6 @@ module "github_terraform_infrastructure" {
 #   value = data.tailscale_devices.devices
 # }
 
-# Golink
-
-# data "tailscale_device" "jasons_golink" {
-#   name = "go.greyhound-little.ts.net"
-# }
-
-# resource "tailscale_device_key" "jasons_golink_device_key" {
-#   device_id           = data.tailscale_device.jasons_golink.id
-#   key_expiry_disabled = true
-# }
-
-# resource "tailscale_device_tags" "jasons_golink_tags" {
-#   device_id = data.tailscale_device.jasons_golink.id
-#   tags      = ["tag:golink"]
-# }
-
-# NAS
-
-# data "tailscale_device" "jasons_home_nas" {
-#   name = "jasons-home-nas.greyhound-little.ts.net"
-# }
-
-# resource "tailscale_device_key" "jasons_home_nas_device_key" {
-#   device_id           = data.tailscale_device.jasons_home_nas.id
-#   key_expiry_disabled = true
-# }
-
-# resource "tailscale_device_tags" "jasons_home_nas_tags" {
-#   device_id = data.tailscale_device.jasons_home_nas.id
-#   tags      = ["tag:nas"]
-# }
-
-# Pi
-
-# data "tailscale_device" "jasons_pi" {
-#   name = "jasons-blog.greyhound-little.ts.net"
-# }
-
-# resource "tailscale_device_key" "jasons_pi_device_key" {
-#   device_id           = data.tailscale_device.jasons_pi.id
-#   key_expiry_disabled = true
-# }
-
-# resource "tailscale_device_tags" "jasons_pi_tags" {
-#   device_id = data.tailscale_device.jasons_pi.id
-#   tags      = ["tag:pi"]
-# }
-
 #
 
 resource "tailscale_dns_preferences" "dns_preferences" {
