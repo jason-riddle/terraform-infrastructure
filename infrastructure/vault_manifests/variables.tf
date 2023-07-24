@@ -3,20 +3,14 @@ variable "enabled" {
   default = null
 }
 
-variable "cluster_id" {
+variable "vault_cluster_address" {
   type      = string
   default   = null
   sensitive = true
 }
 
-# variable "provider_vault_address" {
-#   type      = string
-#   default   = null
-#   sensitive = true
-# }
-
-# variable "provider_vault_token" {
-#   type      = string
-#   default   = null
-#   sensitive = true
-# }
+variable "vault_cluster_token" {
+  type      = string
+  default   = null
+  sensitive = true
+}

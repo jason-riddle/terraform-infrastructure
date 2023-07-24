@@ -120,7 +120,10 @@ module "vault_cluster" {
   enabled = true
 }
 
-# module "vault_manifests" {
-#   source  = "./vault_manifests"
-#   enabled = false
-# }
+module "vault_manifests" {
+  source  = "./vault_manifests"
+  enabled = false
+
+  vault_cluster_address = module.vault_cluster.vault_cluster_public_address
+  vault_cluster_token   = module.vault_cluster.vault_cluster_token
+}

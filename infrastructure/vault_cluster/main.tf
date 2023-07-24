@@ -25,7 +25,7 @@ output "vault_cluster_id" {
   sensitive = true
 }
 
-output "vault_cluster_public_endpoint_url" {
+output "vault_cluster_public_address" {
   value     = hcp_vault_cluster.vault[0].vault_public_endpoint_url
   sensitive = true
 }
