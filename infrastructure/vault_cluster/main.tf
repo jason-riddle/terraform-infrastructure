@@ -24,11 +24,19 @@ resource "hcp_vault_cluster" "vault" {
   # }
 }
 
-# resource "hcp_vault_cluster_admin_token" "cluster_token" {
-#   count = var.enabled ? 1 : 0
+resource "hcp_vault_cluster_admin_token" "cluster_token" {
+  count = var.enabled ? 1 : 0
 
-#   cluster_id = hcp_vault_cluster.vault[0].cluster_id
-# }
+  cluster_id = hcp_vault_cluster.vault[0].cluster_id
+
+  # depends_on = [
+  #   hcp_vault_cluster.vault[0]
+  # ]
+
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
+}
 
 ## Output
 
@@ -40,16 +48,4 @@ resource "hcp_vault_cluster" "vault" {
 # output "vault_cluster_token" {
 #   value     = hcp_vault_cluster_admin_token.cluster_token
 #   sensitive = true
-# }
-
-## Vault manifests
-
-# module "vault_manifests" {
-#   source  = "./vault_manifests"
-#   enabled = var.enabled
-
-#   cluster_id = hcp_vault_cluster.vault[0].cluster_id
-
-#   # provider_vault_address = hcp_vault_cluster.vault[0].vault_public_endpoint_url
-#   # provider_vault_token   = hcp_vault_cluster_admin_token.cluster_token[0].token
 # }
