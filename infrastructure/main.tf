@@ -122,7 +122,7 @@ module "vault_cluster" {
 
 module "vault_manifests" {
   source  = "./vault_manifests"
-  enabled = false
+  enabled = true
 
   vault_cluster_address = module.vault_cluster.vault_cluster_public_address
   vault_cluster_token   = module.vault_cluster.vault_cluster_token
