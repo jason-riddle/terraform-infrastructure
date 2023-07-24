@@ -59,10 +59,10 @@ module "github_terraform_infrastructure" {
 
 ## Kubernetes
 
-module "k8s" {
-  source  = "./k8s"
-  enabled = false
-}
+# module "k8s" {
+#   source  = "./k8s"
+#   enabled = false
+# }
 
 ## Tailscale
 
@@ -110,7 +110,7 @@ output "tailscale_ansible_role_tailscale_github_ci_authkey" {
 
 ## Vault
 
-module "vault" {
-  source  = "./vault"
-  enabled = false
-}
+# module "vault" {
+#   source  = "./vault"
+#   enabled = false
+# }
