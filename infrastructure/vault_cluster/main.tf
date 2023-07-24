@@ -20,15 +20,15 @@ resource "hcp_vault_cluster" "vault_cluster" {
 
 ## Output
 
-# output "vault_cluster_id" {
-#   value     = hcp_vault_cluster.vault_cluster[0].cluster_id
-#   sensitive = true
-# }
+output "vault_cluster_id" {
+  value     = hcp_vault_cluster.vault_cluster.*.cluster_id
+  sensitive = true
+}
 
-# output "vault_cluster_public_address" {
-#   value     = hcp_vault_cluster.vault_cluster[0].vault_public_endpoint_url
-#   sensitive = true
-# }
+output "vault_cluster_public_address" {
+  value     = hcp_vault_cluster.vault_cluster.*.vault_public_endpoint_url
+  sensitive = true
+}
 
 ## Vault Token
 
@@ -40,7 +40,7 @@ resource "hcp_vault_cluster_admin_token" "cluster_token" {
 
 ## Output
 
-# output "vault_cluster_token" {
-#   value     = hcp_vault_cluster_admin_token.cluster_token[0].token
-#   sensitive = true
-# }
+output "vault_cluster_token" {
+  value     = hcp_vault_cluster_admin_token.cluster_token.*.token
+  sensitive = true
+}
