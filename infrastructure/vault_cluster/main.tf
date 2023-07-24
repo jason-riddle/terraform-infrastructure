@@ -11,32 +11,32 @@ resource "hcp_hvn" "hvn" {
   # }
 }
 
-resource "hcp_vault_cluster" "vault" {
-  count = var.enabled ? 1 : 0
+# resource "hcp_vault_cluster" "vault" {
+#   count = var.enabled ? 1 : 0
 
-  cluster_id      = "jasons-vault-cluster"
-  hvn_id          = hcp_hvn.hvn[0].hvn_id
-  public_endpoint = true
-  tier            = "dev"
+#   cluster_id      = "jasons-vault-cluster"
+#   hvn_id          = hcp_hvn.hvn[0].hvn_id
+#   public_endpoint = true
+#   tier            = "dev"
 
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
-}
+#   # lifecycle {
+#   #   prevent_destroy = true
+#   # }
+# }
 
-resource "hcp_vault_cluster_admin_token" "cluster_token" {
-  count = var.enabled ? 1 : 0
+# resource "hcp_vault_cluster_admin_token" "cluster_token" {
+#   count = var.enabled ? 1 : 0
 
-  cluster_id = hcp_vault_cluster.vault[0].cluster_id
+#   cluster_id = hcp_vault_cluster.vault[0].cluster_id
 
-  # depends_on = [
-  #   hcp_vault_cluster.vault[0]
-  # ]
+#   # depends_on = [
+#   #   hcp_vault_cluster.vault[0]
+#   # ]
 
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
-}
+#   # lifecycle {
+#   #   prevent_destroy = true
+#   # }
+# }
 
 ## Output
 
