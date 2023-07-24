@@ -7,18 +7,14 @@ resource "hcp_hvn" "hvn" {
   cidr_block     = "172.25.16.0/20"
 }
 
-# resource "hcp_vault_cluster" "vault" {
-#   count = var.enabled ? 1 : 0
+resource "hcp_vault_cluster" "vault" {
+  count = var.enabled ? 1 : 0
 
-#   cluster_id      = "jasons-vault-cluster"
-#   hvn_id          = hcp_hvn.hvn[0].hvn_id
-#   public_endpoint = true
-#   tier            = "dev"
-
-#   # lifecycle {
-#   #   prevent_destroy = true
-#   # }
-# }
+  cluster_id      = "jasons-vault-cluster"
+  hvn_id          = hcp_hvn.hvn[0].hvn_id
+  public_endpoint = true
+  tier            = "dev"
+}
 
 # resource "hcp_vault_cluster_admin_token" "cluster_token" {
 #   count = var.enabled ? 1 : 0
