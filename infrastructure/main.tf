@@ -59,10 +59,10 @@ module "github_terraform_infrastructure" {
 
 ## Kubernetes
 
-# module "k8s_cluster" {
-#   source  = "./k8s_cluster"
-#   enabled = false
-# }
+module "k8s_cluster" {
+  source  = "./k8s_cluster"
+  enabled = false
+}
 
 # module "k8s_manifests" {
 #   source  = "./k8s_manifests"
