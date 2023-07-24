@@ -11,7 +11,7 @@ resource "hcp_vault_cluster" "vault" {
   count = var.enabled ? 1 : 0
 
   cluster_id      = "jasons-vault-cluster"
-  hvn_id          = hcp_hvn.hvn.*.hvn_id
+  hvn_id          = hcp_hvn.hvn[0].hvn_id
   public_endpoint = true
   tier            = "dev"
 }
@@ -25,7 +25,7 @@ resource "hcp_vault_cluster" "vault" {
 ## Output
 
 output "vault_cluster_id" {
-  value     = hcp_vault_cluster.vault.*.cluster_id
+  value     = hcp_vault_cluster.vault[0].cluster_id
   sensitive = true
 }
 
