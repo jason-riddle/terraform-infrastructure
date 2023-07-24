@@ -24,7 +24,7 @@ resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
 
 ## Output
 
-# output "kube_config" {
-#   value     = digitalocean_kubernetes_cluster.k8s_cluster[0].kube_config
-#   sensitive = true
-# }
+output "kube_config" {
+  value     = digitalocean_kubernetes_cluster.k8s_cluster[0].kube_config
+  sensitive = true
+}
