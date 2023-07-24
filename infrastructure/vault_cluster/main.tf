@@ -30,7 +30,7 @@ output "vault_cluster_id" {
 }
 
 output "vault_cluster_public_endpoint_url" {
-  value     = hcp_vault_cluster.vault.vault_public_endpoint_url
+  value     = hcp_vault_cluster.vault[0].vault_public_endpoint_url
   sensitive = true
 }
 
