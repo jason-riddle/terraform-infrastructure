@@ -32,11 +32,11 @@ output "vault_cluster_public_endpoint_url" {
 
 ## Vault Token
 
-# resource "hcp_vault_cluster_admin_token" "cluster_token" {
-#   count = var.enabled ? 1 : 0
+resource "hcp_vault_cluster_admin_token" "cluster_token" {
+  count = var.enabled ? 1 : 0
 
-#   cluster_id = hcp_vault_cluster.vault[0].cluster_id
-# }
+  cluster_id = hcp_vault_cluster.vault[0].cluster_id
+}
 
 ## Output
 
