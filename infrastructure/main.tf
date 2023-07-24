@@ -115,10 +115,10 @@ output "tailscale_ansible_role_tailscale_github_ci_authkey" {
 
 ## Vault
 
-# module "vault_cluster" {
-#   source  = "./vault_cluster"
-#   enabled = false
-# }
+module "vault_cluster" {
+  source  = "./vault_cluster"
+  enabled = true
+}
 
 # module "vault_manifests" {
 #   source  = "./vault_manifests"
