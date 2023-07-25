@@ -64,10 +64,10 @@ module "k8s_cluster" {
   enabled = true
 }
 
-# module "k8s_manifests" {
-#   source  = "./k8s_manifests"
-#   enabled = false
-# }
+module "k8s_manifests" {
+  source  = "./k8s_manifests"
+  enabled = true
+}
 
 ## Tailscale
 
