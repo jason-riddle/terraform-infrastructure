@@ -1,9 +1,5 @@
 data "digitalocean_kubernetes_cluster" "k8s_cluster" {
   name = "jasons-k8s-cluster"
-
-  # depends_on = [
-  #   digitalocean_kubernetes_cluster.k8s_cluster
-  # ]
 }
 
 provider "kubernetes" {

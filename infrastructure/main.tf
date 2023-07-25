@@ -61,7 +61,7 @@ module "github_terraform_infrastructure" {
 
 module "k8s_cluster" {
   source  = "./k8s_cluster"
-  enabled = false
+  enabled = true
 }
 
 # module "k8s_manifests" {
