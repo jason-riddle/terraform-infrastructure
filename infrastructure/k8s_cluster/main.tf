@@ -30,12 +30,12 @@ output "k8s_cluster_kube_config" {
 }
 
 output "k8s_cluster_kube_config_token" {
-  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.token)
+  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config[*].token)
   sensitive = true
 }
 
 output "k8s_cluster_ca_certificate" {
-  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.cluster_ca_certificate)
+  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config[*].cluster_ca_certificate)
   sensitive = true
 }
 
