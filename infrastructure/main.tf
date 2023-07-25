@@ -66,7 +66,7 @@ module "k8s_cluster" {
 
 module "k8s_manifests" {
   source  = "./k8s_manifests"
-  enabled = true
+  enabled = false
 }
 
 ## Tailscale
