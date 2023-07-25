@@ -6,6 +6,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 
+# REF: https://developer.hashicorp.com/vault/tutorials/cloud-ops/vault-eks
 resource "helm_release" "vault_helm" {
   count = var.enabled ? 1 : 0
 
@@ -17,7 +18,12 @@ resource "helm_release" "vault_helm" {
   create_namespace = true
 
   set {
-    name  = "server.ha.enabled"
+    name  = "injector.enabled"
     value = "false"
+  }
+
+  set {
+    name  = "injector.externalVaultAddr"
+    value = "1.2.3.4"
   }
 }
