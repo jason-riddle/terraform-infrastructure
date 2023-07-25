@@ -28,3 +28,18 @@ output "kube_config" {
   value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config)
   sensitive = true
 }
+
+output "kube_config_token" {
+  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.token)
+  sensitive = true
+}
+
+output "kube_cluster_ca_certificate" {
+  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.cluster_ca_certificate)
+  sensitive = true
+}
+
+output "kube_endpoint" {
+  value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].endpoint)
+  sensitive = true
+}
