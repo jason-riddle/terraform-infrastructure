@@ -6,23 +6,18 @@ resource "kubernetes_namespace" "example" {
   }
 }
 
-# resource "helm_release" "hydra" {
-#   count = var.enabled ? 1 : 0
+resource "helm_release" "vault_helm" {
+  count = var.enabled ? 1 : 0
 
-#   repository = "https://k8s.ory.sh/helm/charts"
-#   chart      = "hydra"
+  repository = "https://helm.releases.hashicorp.com"
+  chart      = "vault"
 
-#   name             = "ory-hydra"
-#   namespace        = "hydra"
-#   create_namespace = true
+  name             = "vault-helm"
+  namespace        = "vault-helm"
+  create_namespace = true
 
-#   set {
-#     name  = "hydra.config.dsn"
-#     value = "memory"
-#   }
-
-#   set {
-#     name  = "image.tag"
-#     value = "latest-sqlite"
-#   }
-# }
+  set {
+    name  = "server.ha.enabled"
+    value = "false"
+  }
+}
