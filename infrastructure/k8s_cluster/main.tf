@@ -24,22 +24,22 @@ resource "digitalocean_kubernetes_cluster" "k8s_cluster" {
 
 ## Output
 
-output "kube_config" {
+output "k8s_cluster_kube_config" {
   value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config)
   sensitive = true
 }
 
-output "kube_config_token" {
+output "k8s_cluster_kube_config_token" {
   value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.token)
   sensitive = true
 }
 
-output "kube_cluster_ca_certificate" {
+output "k8s_cluster_ca_certificate" {
   value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].kube_config.cluster_ca_certificate)
   sensitive = true
 }
 
-output "kube_endpoint" {
+output "k8s_cluster_endpoint" {
   value     = one(digitalocean_kubernetes_cluster.k8s_cluster[*].endpoint)
   sensitive = true
 }
