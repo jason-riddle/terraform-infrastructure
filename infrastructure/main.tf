@@ -17,9 +17,9 @@ module "cloudflare_jasonriddle_com" {
   source = "./cloudflare/jasonriddle_com"
 }
 
-module "cloudflare_jrapps_org" {
-  source = "./cloudflare/jrapps_org"
-}
+# module "cloudflare_jrapps_org" {
+#   source = "./cloudflare/jrapps_org"
+# }
 
 module "cloudflare_riddleapps_net" {
   source = "./cloudflare/riddleapps_net"
