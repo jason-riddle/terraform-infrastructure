@@ -1,4 +1,4 @@
-module "system_user" {
+module "aws_terraform_infrastructure_system_user" {
   source  = "cloudposse/iam-system-user/aws"
   version = "1.1.0"
   enabled = var.enabled

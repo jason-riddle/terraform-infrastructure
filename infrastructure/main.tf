@@ -21,8 +21,8 @@ module "label" {
 #   enabled = false
 # }
 
-module "aws_system_user" {
-  source  = "./aws_users/aws_system_user"
+module "aws_terraform_infrastructure_system_user" {
+  source  = "./aws_users/aws_terraform_infrastructure_system_user"
   enabled = false
 }
 
