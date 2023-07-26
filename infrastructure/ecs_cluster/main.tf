@@ -1,31 +1,21 @@
-# module "vpc" {
-#   source  = "cloudposse/vpc/aws"
-#   version = "1.2.0"
+## Label
 
-#   context                 = module.label.context
-#   ipv4_primary_cidr_block = "172.16.0.0/16"
-# }
+module "label" {
+  source  = "cloudposse/label/null"
+  version = "0.25.0"
+  enabled = true
 
-# module "subnets" {
-#   source  = "cloudposse/dynamic-subnets/aws"
-#   version = "2.0.4"
-
-#   context              = module.label.context
-#   availability_zones   = var.availability_zones
-#   vpc_id               = module.vpc.vpc_id
-#   igw_id               = [module.vpc.igw_id]
-#   ipv4_cidr_block      = [module.vpc.vpc_cidr_block]
-#   nat_gateway_enabled  = false
-#   nat_instance_enabled = false
-# }
+  namespace   = "terraform"
+  environment = "infrastructure"
+}
 
 module "ecs_cluster" {
-  source = "cloudposse/ecs-cluster/aws"
+  source  = "cloudposse/ecs-cluster/aws"
+  version = "0.4.1"
 
   context = module.label.context
 
   container_insights_enabled      = false
   capacity_providers_fargate      = false
   capacity_providers_fargate_spot = false
-  capacity_providers_ec2          = false
 }
