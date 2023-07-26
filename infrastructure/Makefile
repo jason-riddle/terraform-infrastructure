@@ -2,28 +2,31 @@ login:
 	devenv shell -- terraform login
 
 init:
-	devenv shell -- terraform init >/dev/null
+	devenv shell -- terraform init
+
+init_null:
+	devenv shell -- terraform init &>/dev/null
 
 upgrade:
 	devenv shell -- terraform init -upgrade
 
-plan: init
+plan: init_null
 	devenv shell -- terraform plan
 
-apply: init
+apply: init_null
 	devenv shell -- terraform apply
 
-fmt: init
+fmt: init_null
 	devenv shell -- terraform fmt -recursive
 
-validate: init
+validate: init_null
 	devenv shell -- terraform fmt -check -recursive -diff
 	devenv shell -- terraform validate .
 
-output: init
+output: init_null
 	devenv shell -- terraform output -json
 
-console: init
+console: init_null
 	devenv shell -- terraform console
 
 ls:
