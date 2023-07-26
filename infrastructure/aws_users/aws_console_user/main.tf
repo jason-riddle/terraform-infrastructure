@@ -1,3 +1,14 @@
+## Label
+
+module "label" {
+  source  = "cloudposse/label/null"
+  version = "0.25.0"
+  enabled = true
+
+  namespace   = "terraform"
+  environment = "infrastructure"
+}
+
 module "aws_console_user" {
   source  = "cloudposse/iam-user/aws"
   version = "0.8.4"
