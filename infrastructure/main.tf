@@ -23,7 +23,7 @@ module "label" {
 
 module "aws_terraform_infrastructure_system_user" {
   source  = "./aws_users/aws_terraform_infrastructure_system_user"
-  enabled = false
+  enabled = true
 }
 
 ## Cloudflare
