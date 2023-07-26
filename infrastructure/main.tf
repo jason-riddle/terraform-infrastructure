@@ -11,6 +11,16 @@ module "label" {
 
 ## AWS
 
+# module "aws_cli_user" {
+#   source  = "./aws_users/aws_cli_user"
+#   enabled = false
+# }
+
+# module "aws_console_user" {
+#   source  = "./aws_users/aws_console_user"
+#   enabled = false
+# }
+
 ## Cloudflare
 
 module "cloudflare_jasonriddle_com" {

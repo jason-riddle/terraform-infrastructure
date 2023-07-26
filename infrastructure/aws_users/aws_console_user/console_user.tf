@@ -1,7 +1,7 @@
 module "console_user" {
   source  = "cloudposse/iam-user/aws"
   version = "0.8.4"
-  enabled = false
+  enabled = var.enabled
 
   user_name = "test4-console-user-jason"
   groups    = []

@@ -1,7 +1,7 @@
 module "cli_user" {
   source  = "cloudposse/iam-user/aws"
   version = "0.8.4"
-  enabled = false
+  enabled = var.enabled
 
   user_name = "test2-cli-user-jason"
   groups    = []
