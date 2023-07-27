@@ -15,9 +15,9 @@ module "aws_dynamic_creds" {
   source = "./aws_dynamic_creds"
 }
 
-output "openid_claims" {
-  value = module.aws_dynamic_creds.openid_claims
-}
+# output "openid_claims" {
+#   value = module.aws_dynamic_creds.openid_claims
+# }
 
 output "role_arn" {
   value = module.aws_dynamic_creds.role_arn
