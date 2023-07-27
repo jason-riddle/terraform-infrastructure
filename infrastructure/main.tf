@@ -11,10 +11,10 @@ module "label" {
 
 ## AWS
 
-# module "aws_cli_user" {
-#   source  = "./aws_users/aws_cli_user"
-#   enabled = false
-# }
+module "aws_cli_user" {
+  source  = "./aws_users/aws_cli_user"
+  enabled = false
+}
 
 # module "aws_console_user" {
 #   source  = "./aws_users/aws_console_user"

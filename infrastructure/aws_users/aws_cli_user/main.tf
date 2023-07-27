@@ -17,11 +17,10 @@ module "aws_cli_user" {
   user_name = "test2-cli-user-jason"
   groups    = []
 
-  pgp_key                 = ""
-  password_length         = 24
-  password_reset_required = true
-  login_profile_enabled   = false
+  pgp_key               = ""
+  login_profile_enabled = false
 
   name    = "test3-cli-user-jason"
+
   context = module.label.context
 }
