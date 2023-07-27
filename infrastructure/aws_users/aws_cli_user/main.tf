@@ -20,7 +20,7 @@ module "aws_cli_user" {
   pgp_key               = ""
   login_profile_enabled = false
 
-  name    = "test3-cli-user-jason"
+  name = "test3-cli-user-jason"
 
   context = module.label.context
 }
