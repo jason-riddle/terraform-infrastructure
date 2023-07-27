@@ -63,6 +63,8 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "tfc_policy_attachment" {
+  count = var.enabled ? 1 : 0
+
   role       = aws_iam_role.tfc_role.name
   policy_arn = aws_iam_policy.tfc_policy.arn
 }
