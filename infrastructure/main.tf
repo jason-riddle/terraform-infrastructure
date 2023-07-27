@@ -78,12 +78,12 @@ module "aws_terraform_infrastructure_backup_system_user" {
   enabled = true
 }
 
-output "system_access_key_id_ssm_path" {
+output "backup_system_access_key_id_ssm_path" {
   value     = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
   sensitive = true
 }
 
-output "system_secret_access_key_ssm_path" {
+output "backup_system_secret_access_key_ssm_path" {
   value     = module.aws_terraform_infrastructure_backup_system_user.secret_access_key_ssm_path
   sensitive = true
 }
