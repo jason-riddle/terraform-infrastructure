@@ -71,6 +71,23 @@ output "system_secret_access_key_ssm_path" {
   sensitive = true
 }
 
+#
+
+module "aws_terraform_infrastructure_backup_system_user" {
+  source  = "./aws_users/aws_terraform_infrastructure_backup_system_user"
+  enabled = true
+}
+
+output "system_access_key_id_ssm_path" {
+  value     = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
+  sensitive = true
+}
+
+output "system_secret_access_key_ssm_path" {
+  value     = module.aws_terraform_infrastructure_backup_system_user.secret_access_key_ssm_path
+  sensitive = true
+}
+
 ## Cloudflare
 
 module "cloudflare_jasonriddle_com" {
