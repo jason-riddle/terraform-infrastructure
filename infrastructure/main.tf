@@ -13,7 +13,7 @@ module "label" {
 
 module "aws_cli_user" {
   source  = "./aws_users/aws_cli_user"
-  enabled = false
+  enabled = true
 }
 
 # module "aws_console_user" {
