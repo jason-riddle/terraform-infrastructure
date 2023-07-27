@@ -16,7 +16,7 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
 }
 
 resource "aws_iam_role" "tfc_role" {
-  name = "terraform-infrastructure-aws-tfc-role-newer"
+  name = "terraform-infrastructure-aws-tfc-role"
 
   assume_role_policy = <<EOF
 {
