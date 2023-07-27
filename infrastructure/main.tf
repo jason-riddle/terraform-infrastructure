@@ -42,35 +42,35 @@ module "cloudflare_riddleapps_net" {
 
 ## GitHub
 
-module "github_ansible_labs" {
-  source    = "./github/public_repo"
-  repo_name = "ansible-labs"
-}
+# module "github_ansible_labs" {
+#   source    = "./github/public_repo"
+#   repo_name = "ansible-labs"
+# }
 
-module "github_dotfiles" {
-  source    = "./github/public_repo"
-  repo_name = "dotfiles"
-}
+# module "github_dotfiles" {
+#   source    = "./github/public_repo"
+#   repo_name = "dotfiles"
+# }
 
-module "github_dotv2" {
-  source    = "./github/public_repo"
-  repo_name = "dotv2"
-}
+# module "github_dotv2" {
+#   source    = "./github/public_repo"
+#   repo_name = "dotv2"
+# }
 
-module "github_infrastructure" {
-  source    = "./github/public_repo"
-  repo_name = "infrastructure"
-}
+# module "github_infrastructure" {
+#   source    = "./github/public_repo"
+#   repo_name = "infrastructure"
+# }
 
-module "github_tailscale_acls" {
-  source    = "./github/private_repo"
-  repo_name = "tailscale-acls"
-}
+# module "github_tailscale_acls" {
+#   source    = "./github/private_repo"
+#   repo_name = "tailscale-acls"
+# }
 
-module "github_terraform_infrastructure" {
-  source    = "./github/public_repo"
-  repo_name = "terraform-infrastructure"
-}
+# module "github_terraform_infrastructure" {
+#   source    = "./github/public_repo"
+#   repo_name = "terraform-infrastructure"
+# }
 
 ## Kubernetes
 
