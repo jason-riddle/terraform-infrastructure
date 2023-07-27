@@ -22,6 +22,7 @@ module "aws_console_user" {
   password_reset_required = true
   login_profile_enabled   = true
 
-  name    = "test5-console-user-jason"
+  name = "test5-console-user-jason"
+
   context = module.label.context
 }
