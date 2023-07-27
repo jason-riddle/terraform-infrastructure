@@ -13,10 +13,6 @@ module "label" {
 
 module "aws_dynamic_creds" {
   source = "./aws_dynamic_creds"
-
-  tfc_organization_name = "asd"
-  tfc_project_name      = "asd"
-  tfc_workspace_name    = "asd"
 }
 
 output "openid_claims" {
