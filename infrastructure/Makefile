@@ -5,7 +5,7 @@ init:
 	devenv shell -- terraform init
 
 init_null:
-	devenv shell -- terraform init &>/dev/null
+	devenv shell -- terraform init >/dev/null
 
 upgrade:
 	devenv shell -- terraform init -upgrade

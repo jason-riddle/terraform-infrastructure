@@ -14,7 +14,7 @@ module "aws_terraform_infrastructure_system_user" {
   version = "1.1.0"
   enabled = var.enabled
 
-  ssm_enabled                   = false
+  ssm_enabled                   = true
   ssm_ses_smtp_password_enabled = false
 
   name = "system-user"
@@ -24,4 +24,14 @@ module "aws_terraform_infrastructure_system_user" {
   }
 
   context = module.label.context
+}
+
+## Output
+
+output "access_key_id_ssm_path" {
+  value = aws_terraform_infrastructure_system_user.access_key_id_ssm_path
+}
+
+output "secret_access_key_ssm_path" {
+  value = aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
 }
