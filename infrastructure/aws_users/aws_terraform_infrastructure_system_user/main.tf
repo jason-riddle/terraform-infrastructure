@@ -29,9 +29,11 @@ module "aws_terraform_infrastructure_system_user" {
 ## Output
 
 output "access_key_id_ssm_path" {
-  value = aws_terraform_infrastructure_system_user.access_key_id_ssm_path
+  value     = aws_terraform_infrastructure_system_user.access_key_id_ssm_path
+  sensitive = true
 }
 
 output "secret_access_key_ssm_path" {
-  value = aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
+  value     = aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
+  sensitive = true
 }
