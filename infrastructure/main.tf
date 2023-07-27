@@ -25,6 +25,20 @@ output "role_arn" {
 
 #
 
+module "aws_tfc_role" {
+  source = "./aws_tfc_role"
+}
+
+# output "openid_claims" {
+#   value = module.aws_tfc_role.openid_claims
+# }
+
+output "role_arn" {
+  value = module.aws_tfc_role.role_arn
+}
+
+#
+
 module "aws_jason_cli_user" {
   source  = "./aws_users/aws_jason_cli_user"
   enabled = true
