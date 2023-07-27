@@ -11,17 +11,17 @@ module "label" {
 
 ## AWS
 
-module "aws_dynamic_creds" {
-  source = "./aws_dynamic_creds"
-}
+# module "aws_dynamic_creds" {
+#   source = "./aws_dynamic_creds"
+# }
 
 # output "openid_claims" {
 #   value = module.aws_dynamic_creds.openid_claims
 # }
 
-output "aws_dynamic_creds_role_arn" {
-  value = module.aws_dynamic_creds.role_arn
-}
+# output "aws_dynamic_creds_role_arn" {
+#   value = module.aws_dynamic_creds.role_arn
+# }
 
 #
 
