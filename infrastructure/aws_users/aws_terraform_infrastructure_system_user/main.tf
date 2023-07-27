@@ -20,7 +20,7 @@ module "aws_terraform_infrastructure_system_user" {
   name = "system-user"
 
   policy_arns_map = {
-    logs = "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+    admin = "arn:aws:iam::aws:policy/AdministratorAccess"
   }
 
   context = module.label.context
