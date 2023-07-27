@@ -17,7 +17,7 @@ module "aws_jason_cli_user" {
   ssm_enabled                   = true
   ssm_ses_smtp_password_enabled = false
 
-  name = "system-user"
+  name = "jason"
 
   policy_arns_map = {
     admin = "arn:aws:iam::aws:policy/AdministratorAccess"
