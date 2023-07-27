@@ -11,17 +11,34 @@ module "label" {
 
 ## AWS
 
+module "aws_cli_jason_user" {
+  source  = "./aws_users/aws_cli_jason_user"
+  enabled = true
+}
+
+output "jason_access_key_id_ssm_path" {
+  value     = module.aws_cli_jason_user.access_key_id_ssm_path
+  sensitive = true
+}
+
+output "jason_secret_access_key_ssm_path" {
+  value     = module.aws_cli_jason_user.secret_access_key_ssm_path
+  sensitive = true
+}
+
+#
+
 module "aws_terraform_infrastructure_system_user" {
   source  = "./aws_users/aws_terraform_infrastructure_system_user"
   enabled = true
 }
 
-output "access_key_id_ssm_path" {
+output "system_access_key_id_ssm_path" {
   value     = module.aws_terraform_infrastructure_system_user.access_key_id_ssm_path
   sensitive = true
 }
 
-output "secret_access_key_ssm_path" {
+output "system_secret_access_key_ssm_path" {
   value     = module.aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
   sensitive = true
 }
