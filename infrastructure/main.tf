@@ -14,7 +14,8 @@ module "label" {
 #
 
 module "aws_tfc_role" {
-  source = "./aws_tfc_role"
+  source  = "./aws_tfc_role"
+  enabled = true
 }
 
 # output "openid_claims" {

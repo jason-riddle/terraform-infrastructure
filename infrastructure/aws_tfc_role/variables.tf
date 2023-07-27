@@ -1,3 +1,10 @@
+variable "enabled" {
+  type    = bool
+  default = null
+}
+
+#
+
 variable "tfc_aws_audience" {
   type        = string
   default     = "aws.workload.identity"
