@@ -26,6 +26,16 @@ module "aws_terraform_infrastructure_system_user" {
   enabled = true
 }
 
+output "access_key_id_ssm_path" {
+  value     = module.aws_terraform_infrastructure_system_user.access_key_id_ssm_path
+  sensitive = true
+}
+
+output "secret_access_key_ssm_path" {
+  value     = module.aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
+  sensitive = true
+}
+
 ## Cloudflare
 
 module "cloudflare_jasonriddle_com" {
