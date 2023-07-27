@@ -19,7 +19,7 @@ module "aws_dynamic_creds" {
 #   value = module.aws_dynamic_creds.openid_claims
 # }
 
-output "role_arn" {
+output "aws_dynamic_creds_role_arn" {
   value = module.aws_dynamic_creds.role_arn
 }
 
@@ -33,7 +33,7 @@ module "aws_tfc_role" {
 #   value = module.aws_tfc_role.openid_claims
 # }
 
-output "role_arn" {
+output "tfc_role_arn" {
   value = module.aws_tfc_role.role_arn
 }
 
