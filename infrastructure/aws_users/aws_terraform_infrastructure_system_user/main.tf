@@ -17,6 +17,11 @@ module "aws_terraform_infrastructure_system_user" {
   ssm_enabled                   = false
   ssm_ses_smtp_password_enabled = false
 
-  name    = "test-system-user-tf"
+  name = "test-system-user-tf"
+
+  policy_arns_map = {
+    logs = "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+  }
+
   context = module.label.context
 }
