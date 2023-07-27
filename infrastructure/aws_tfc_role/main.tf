@@ -43,7 +43,9 @@ EOF
 }
 
 resource "aws_iam_policy" "tfc_policy" {
-  name        = "tfc-run-policy"
+  count = var.enabled ? 1 : 0
+
+  name        = "tfc-policy"
   description = "TFC run policy"
 
   policy = <<EOF
@@ -66,5 +68,5 @@ resource "aws_iam_role_policy_attachment" "tfc_policy_attachment" {
   count = var.enabled ? 1 : 0
 
   role       = aws_iam_role.tfc_role.name
-  policy_arn = aws_iam_policy.tfc_policy.arn
+  policy_arn = aws_iam_policy.tfc_policy[0].arn
 }
