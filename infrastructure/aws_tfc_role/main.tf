@@ -43,7 +43,7 @@ EOF
 }
 
 resource "aws_iam_policy" "tfc_policy" {
-  name        = "tfc-policy"
+  name        = "tfc-run-policy"
   description = "TFC run policy"
 
   policy = <<EOF
