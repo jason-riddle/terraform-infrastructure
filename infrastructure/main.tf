@@ -11,6 +11,26 @@ module "label" {
 
 ## AWS
 
+module "aws_dynamic_creds" {
+  source = "./aws_dynamic_creds"
+
+  tfc_organization_name = "asd"
+  tfc_project_name      = "asd"
+  tfc_workspace_name    = "asd"
+}
+
+output "openid_claims" {
+  value     = module.aws_dynamic_creds.openid_claims
+  sensitive = true
+}
+
+output "role_arn" {
+  value     = module.aws_dynamic_creds.role_arn
+  sensitive = true
+}
+
+#
+
 module "aws_jason_cli_user" {
   source  = "./aws_users/aws_jason_cli_user"
   enabled = true
