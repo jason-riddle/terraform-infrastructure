@@ -46,6 +46,13 @@ provider "github" {}
 # >> Service Account Role: ?
 # >> Service Account Permissions: ?
 # >> Service Account Keys: https://console.cloud.google.com/iam-admin/serviceaccounts/details/112222367733525882864/keys?project=starlit-factor-394405
+#
+# Create a new service account: https://cloud.google.com/iam/docs/service-accounts-create#iam-service-accounts-create-gcloud
+#
+# gcloud iam service-accounts create SA_NAME \
+#   --description="DESCRIPTION \
+#   --display-name="DISPLAY_NAME \
+#
 provider "google" {
   project = "starlit-factor-394405"
   # region  = "us-central1"
