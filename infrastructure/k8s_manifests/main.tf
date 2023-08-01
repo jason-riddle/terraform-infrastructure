@@ -6,7 +6,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 
-# REF: https://developer.hashicorp.com/vault/tutorials/cloud-ops/vault-eks
+# DOCS: https://developer.hashicorp.com/vault/tutorials/cloud-ops/vault-eks
 resource "helm_release" "vault_helm" {
   count = var.enabled ? 1 : 0
 
