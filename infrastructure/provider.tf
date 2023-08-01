@@ -37,7 +37,7 @@ provider "github" {}
 ## Google
 
 # Set `GOOGLE_CREDENTIALS`
-# DOCS: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_DOCSerence
+# DOCS: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
 # Credentials
 # > Name:
 # > Permissions:
@@ -51,7 +51,7 @@ provider "google" {}
 # Credentials
 # > Name:
 # > Permissions:
-# > Settings URL:
+# > Settings URL: https://portal.cloud.hashicorp.com/access/service-principals?org_id=c3fd7556-9d82-49b1-9138-0207ce01936d&project_id=32bf730d-122a-4e77-888a-1cdbb7eacbde
 provider "hcp" {}
 
 ## Tailscale
@@ -61,5 +61,5 @@ provider "hcp" {}
 # Credentials
 # > Name:
 # > Permissions:
-# > Settings URL:
+# > Settings URL: https://login.tailscale.com/admin/settings/keys
 provider "tailscale" {}
