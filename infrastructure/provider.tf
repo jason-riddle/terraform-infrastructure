@@ -28,6 +28,11 @@ provider "cloudflare" {}
 # > Token Settings URL: https://github.com/settings/tokens
 provider "github" {}
 
+## Google
+
+# REF: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
+provider "google" {}
+
 ## HCP
 
 # Set `HCP_CLIENT_ID` and `HCP_CLIENT_SECRET`
