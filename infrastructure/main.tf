@@ -123,6 +123,13 @@ module "cloudflare_riddleapps_net" {
 #   repo_name = "terraform-infrastructure"
 # }
 
+## Google
+
+module "google_gcp_service_accounts" {
+  source  = "./google_gcp_service_accounts"
+  enabled = true
+}
+
 ## Kubernetes
 
 module "k8s_cluster" {
