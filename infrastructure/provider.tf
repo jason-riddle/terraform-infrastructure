@@ -36,7 +36,7 @@ provider "github" {}
 
 ## Google
 
-# Set `GOOGLE_CREDENTIALS`
+# Set `GOOGLE_CREDENTIALS`, `GOOGLE_PROJECT`, `GOOGLE_REGION`, `GOOGLE_ZONE`
 # DOCS: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
 # Credentials
 # > Name: tf-test-account
@@ -46,7 +46,11 @@ provider "github" {}
 # >> Service Account Role: ?
 # >> Service Account Permissions: ?
 # >> Service Account Keys: https://console.cloud.google.com/iam-admin/serviceaccounts/details/112222367733525882864/keys?project=starlit-factor-394405
-provider "google" {}
+provider "google" {
+  project = "starlit-factor-394405"
+  # region  = "us-central1"
+  # zone    = "us-central1-c"
+}
 
 ## HCP
 
