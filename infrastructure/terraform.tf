@@ -31,6 +31,11 @@ terraform {
       source  = "integrations/github"
       version = ">= 5.31.0"
     }
+    # REF: https://registry.terraform.io/providers/hashicorp/google/latest/docs
+    google = {
+      source  = "hashicorp/google"
+      version = ">= 4.76.0"
+    }
     # REF: https://registry.terraform.io/providers/hashicorp/hcp/latest/docs
     # hcp = {
     #   source  = "hashicorp/hcp"
