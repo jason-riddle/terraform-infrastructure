@@ -16,6 +16,8 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
 }
 
 resource "aws_iam_role" "tfc_role" {
+  count = var.enabled ? 1 : 0
+
   name = "terraform-infrastructure-aws-tfc-role"
 
   assume_role_policy = <<EOF
@@ -67,6 +69,6 @@ EOF
 resource "aws_iam_role_policy_attachment" "tfc_policy_attachment" {
   count = var.enabled ? 1 : 0
 
-  role       = aws_iam_role.tfc_role.name
+  role       = aws_iam_role.tfc_role[0].name
   policy_arn = aws_iam_policy.tfc_policy[0].arn
 }
