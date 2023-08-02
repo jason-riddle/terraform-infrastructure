@@ -25,3 +25,8 @@ resource "google_service_account_iam_policy" "policy" {
   service_account_id = google_service_account.service_account.id
   policy_data        = data.google_iam_policy.policy.policy_data
 }
+
+resource "google_project_iam_member" "binding" {
+  role   = "roles/aiplatform.admin"
+  member = data.google_service_account.service_account.member
+}
