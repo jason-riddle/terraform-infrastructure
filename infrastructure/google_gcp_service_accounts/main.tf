@@ -17,20 +17,20 @@ resource "google_service_account" "service_account" {
   display_name = "Service Account"
 }
 
-data "google_iam_policy" "policy" {
-  binding {
-    role = "roles/iam.serviceAccountUser"
+# data "google_iam_policy" "policy" {
+#   binding {
+#     role = "roles/iam.serviceAccountUser"
 
-    members = [
-      "group:engineering@hmm.com"
-    ]
-  }
-}
+#     members = [
+#       "group:engineering@hmm.com"
+#     ]
+#   }
+# }
 
-resource "google_service_account_iam_policy" "policy" {
-  service_account_id = google_service_account.service_account[0].id
-  policy_data        = data.google_iam_policy.policy.policy_data
-}
+# resource "google_service_account_iam_policy" "policy" {
+#   service_account_id = google_service_account.service_account[0].id
+#   policy_data        = data.google_iam_policy.policy.policy_data
+# }
 
 resource "google_project_iam_member" "binding" {
   project = "foo"
