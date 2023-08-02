@@ -4,6 +4,12 @@
 # https://console.developers.google.com/apis/api/iam.googleapis.com/overview?project=425848421470
 #
 # RESOURCE: https://console.cloud.google.com/iam-admin/serviceaccounts/details/100976711803280994849?project=starlit-factor-394405
+
+# Show service account members and permissions
+# gcloud beta asset search-all-iam-policies
+#   --scope='project/foo' \
+#   --query='policy=service_account@dev.gserviceaccount.com'
+
 resource "google_service_account" "service_account" {
   count = var.enabled ? 1 : 0
 
