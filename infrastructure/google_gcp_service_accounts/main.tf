@@ -33,6 +33,7 @@ resource "google_service_account_iam_policy" "policy" {
 }
 
 resource "google_project_iam_member" "binding" {
-  role   = "roles/aiplatform.admin"
-  member = google_service_account.service_account[0].member
+  project = "foo"
+  role    = "roles/aiplatform.admin"
+  member  = google_service_account.service_account[0].member
 }
