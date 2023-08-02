@@ -33,7 +33,7 @@ resource "google_service_account" "service_account" {
 # }
 
 resource "google_project_iam_member" "binding" {
-  project = "foo"
+  project = "starlit-factor-394405"
   role    = "roles/aiplatform.admin"
   member  = google_service_account.service_account[0].member
 }
