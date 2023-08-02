@@ -10,3 +10,18 @@ resource "google_service_account" "service_account" {
   account_id   = "service-account-id"
   display_name = "Service Account"
 }
+
+data "google_iam_policy" "policy" {
+  binding {
+    role = "roles/iam.serviceAccountUser"
+
+    members = [
+      "group:engineering@hmm.com"
+    ]
+  }
+}
+
+resource "google_service_account_iam_policy" "policy" {
+  service_account_id = google_service_account.service_account.id
+  policy_data        = data.google_iam_policy.policy.policy_data
+}
