@@ -130,6 +130,11 @@ module "google_gcp_service_accounts" {
   enabled = true
 }
 
+module "google_gcp_service_accounts_modules" {
+  source  = "./google_gcp_service_accounts_modules"
+  enabled = true
+}
+
 ## Kubernetes
 
 module "k8s_cluster" {
