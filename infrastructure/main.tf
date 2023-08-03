@@ -13,8 +13,8 @@ module "label" {
 
 #
 
-module "aws_tfc_role" {
-  source  = "./aws_tfc_role"
+module "aws_tfc_oidc_role" {
+  source  = "./aws_tfc_oidc_role"
   enabled = true
 }
 
