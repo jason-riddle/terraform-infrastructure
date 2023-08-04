@@ -22,8 +22,8 @@ module "aws_tfc_oidc_role" {
 #   value = module.aws_tfc_role.openid_claims
 # }
 
-output "tfc_role_arn" {
-  value = module.aws_tfc_role.role_arn
+output "aws_tfc_oidc_role_arn" {
+  value = module.aws_tfc_oidc_role.role_arn
 }
 
 #
