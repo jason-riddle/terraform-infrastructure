@@ -73,9 +73,9 @@ module "label" {
 
 ## Cloudflare
 
-module "cloudflare_jasonriddle_com" {
-  source = "./cloudflare/jasonriddle_com"
-}
+# module "cloudflare_jasonriddle_com" {
+#   source = "./cloudflare/jasonriddle_com"
+# }
 
 # jasonriddle.com
 data "cloudflare_zone" "jasonriddle_com" {
@@ -118,10 +118,9 @@ resource "cloudflare_page_rule" "wp_admin" {
 #   }
 # }
 
-
-module "cloudflare_riddleapps_net" {
-  source = "./cloudflare/riddleapps_net"
-}
+# module "cloudflare_riddleapps_net" {
+#   source = "./cloudflare/riddleapps_net"
+# }
 
 # riddleapps.net
 data "cloudflare_zone" "riddleapps_net" {
@@ -168,10 +167,10 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
 
 ## Google
 
-module "google_gcp_service_accounts" {
-  source  = "./google_gcp_service_accounts"
-  enabled = false
-}
+# module "google_gcp_service_accounts" {
+#   source  = "./google_gcp_service_accounts"
+#   enabled = false
+# }
 
 ## Kubernetes
 
