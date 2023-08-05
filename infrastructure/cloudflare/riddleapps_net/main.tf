@@ -14,7 +14,7 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
   ttl     = 1
   proxied = false
 
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
