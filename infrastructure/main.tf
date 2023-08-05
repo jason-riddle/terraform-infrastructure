@@ -119,6 +119,13 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
 
 ## Google
 
+resource "google_service_account" "service_account" {
+  count = 1
+
+  account_id   = "service-account-id"
+  display_name = "Service Account Name"
+}
+
 ## Kubernetes
 
 ## Tailscale

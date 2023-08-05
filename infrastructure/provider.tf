@@ -53,11 +53,11 @@ provider "cloudflare" {}
 #   --description="DESCRIPTION \
 #   --display-name="DISPLAY_NAME \
 #
-# provider "google" {
-#   project = "starlit-factor-394405"
-#   # region  = "us-central1"
-#   # zone    = "us-central1-c"
-# }
+provider "google" {
+  project = "starlit-factor-394405"
+  # region  = "us-central1"
+  # zone    = "us-central1-c"
+}
 
 ## HCP
 
