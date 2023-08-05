@@ -18,7 +18,7 @@ module "subnets" {
   version = "2.4.1"
   enabled = var.enabled
 
-  ipv4_cidr_block = "10.0.0.0/16"
+  # ipv4_cidr_block = "10.0.0.0/16"
 
   vpc_id = module.vpc.vpc_id
   # igw_id = [module.vpc.igw_id]
