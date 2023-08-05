@@ -1,30 +1,4 @@
-## Label
-
-# module "label" {
-#   source  = "cloudposse/label/null"
-#   version = "0.25.0"
-#   enabled = true
-
-#   namespace   = "terraform"
-#   environment = "infrastructure"
-# }
-
 ## AWS
-
-# module "aws_cli_user" {
-#   source  = "./aws_cli_user"
-#   enabled = false
-# }
-
-# output "access_key_id_ssm_path" {
-#   value = module.aws_cli_user.access_key_id_ssm_path
-# }
-
-# output "secret_access_key_ssm_path" {
-#   value = module.aws_cli_user.secret_access_key_ssm_path
-# }
-
-#
 
 module "eks_cluster" {
   source  = "./eks_cluster"
@@ -91,10 +65,6 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
   type    = "CNAME"
   ttl     = 1
   proxied = false
-
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
 }
 
 ## GitHub
@@ -121,12 +91,12 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
 
 ## Google
 
-resource "google_service_account" "service_account" {
-  count = 1
+# resource "google_service_account" "service_account" {
+#   count = 1
 
-  account_id   = "service-account-id"
-  display_name = "Service Account Name"
-}
+#   account_id   = "service-account-id"
+#   display_name = "Service Account Name"
+# }
 
 ## Kubernetes
 
