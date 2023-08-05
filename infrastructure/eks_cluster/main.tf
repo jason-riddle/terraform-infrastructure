@@ -8,5 +8,7 @@ module "vpc" {
   assign_generated_ipv6_cidr_block          = false
   ipv6_egress_only_internet_gateway_enabled = false
 
+  internet_gateway_enabled = false
+
   context = module.this.context
 }
