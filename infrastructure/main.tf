@@ -24,6 +24,13 @@ module "label" {
 #   value = module.aws_cli_user.secret_access_key_ssm_path
 # }
 
+#
+
+module "aws_eks_cluster" {
+  source  = "./aws_eks_cluster"
+  enabled = true
+}
+
 ## Cloudflare
 
 # jasonriddle.com
