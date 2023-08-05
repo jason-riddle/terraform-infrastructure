@@ -4,7 +4,7 @@ data "cloudflare_zone" "jasonriddle_com" {
 }
 
 resource "cloudflare_page_rule" "wp_admin" {
-  count = 1
+  count = 0
 
   zone_id  = data.cloudflare_zone.jasonriddle_com.id
   target   = "*jasonriddle.com/wp-admin*"
