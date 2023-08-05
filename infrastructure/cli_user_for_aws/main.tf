@@ -1,14 +1,3 @@
-## Label
-
-module "label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
-  enabled = true
-
-  namespace   = "terraform"
-  environment = "infrastructure"
-}
-
 module "aws_cli_user" {
   source  = "cloudposse/iam-system-user/aws"
   version = "1.1.0"
@@ -23,7 +12,7 @@ module "aws_cli_user" {
     admin = "arn:aws:iam::aws:policy/AdministratorAccess"
   }
 
-  context = module.label.context
+  context = module.this.context
 }
 
 ## Output
