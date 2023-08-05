@@ -29,11 +29,9 @@ module "backup_aws_terraform_infrastructure_system_user" {
 ## Output
 
 output "backup_access_key_id_ssm_path" {
-  value     = module.backup_aws_terraform_infrastructure_system_user.access_key_id_ssm_path
-  sensitive = true
+  value = module.backup_aws_terraform_infrastructure_system_user.access_key_id_ssm_path
 }
 
 output "backup_secret_access_key_ssm_path" {
-  value     = module.backup_aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
-  sensitive = true
+  value = module.backup_aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
 }

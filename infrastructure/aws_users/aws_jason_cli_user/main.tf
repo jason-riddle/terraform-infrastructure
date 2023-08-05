@@ -29,11 +29,9 @@ module "aws_jason_cli_user" {
 ## Output
 
 output "access_key_id_ssm_path" {
-  value     = module.aws_jason_cli_user.access_key_id_ssm_path
-  sensitive = true
+  value = module.aws_jason_cli_user.access_key_id_ssm_path
 }
 
 output "secret_access_key_ssm_path" {
-  value     = module.aws_jason_cli_user.secret_access_key_ssm_path
-  sensitive = true
+  value = module.aws_jason_cli_user.secret_access_key_ssm_path
 }
