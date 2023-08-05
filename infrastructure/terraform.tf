@@ -27,25 +27,25 @@ terraform {
     #   version = ">= 2.29.0"
     # }
     # DOCS: https://registry.terraform.io/providers/integrations/github/latest/docs
-    github = {
-      source  = "integrations/github"
-      version = ">= 5.31.0"
-    }
+    # github = {
+    #   source  = "integrations/github"
+    #   version = ">= 5.31.0"
+    # }
     # DOCS: https://registry.terraform.io/providers/hashicorp/google/latest/docs
-    google = {
-      source  = "hashicorp/google"
-      version = ">= 4.76.0"
-    }
+    # google = {
+    #   source  = "hashicorp/google"
+    #   version = ">= 4.76.0"
+    # }
     # DOCS: https://registry.terraform.io/providers/hashicorp/hcp/latest/docs
     # hcp = {
     #   source  = "hashicorp/hcp"
     #   version = ">= 0.66.0"
     # }
     # DOCS: https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-    tailscale = {
-      source  = "tailscale/tailscale"
-      version = ">= 0.13.7"
-    }
+    # tailscale = {
+    #   source  = "tailscale/tailscale"
+    #   version = ">= 0.13.7"
+    # }
     # DOCS: https://registry.terraform.io/providers/hashicorp/vault/latest/docs
     # vault = {
     #   source  = "hashicorp/vault"

@@ -32,7 +32,7 @@ provider "cloudflare" {}
 # > Name: terraform-infrastructure-system-user
 # > Permissions: public_repo, read:org
 # > Settings URL: https://github.com/settings/tokens/1270530699
-provider "github" {}
+# provider "github" {}
 
 ## Google
 
@@ -53,11 +53,11 @@ provider "github" {}
 #   --description="DESCRIPTION \
 #   --display-name="DISPLAY_NAME \
 #
-provider "google" {
-  project = "starlit-factor-394405"
-  # region  = "us-central1"
-  # zone    = "us-central1-c"
-}
+# provider "google" {
+#   project = "starlit-factor-394405"
+#   # region  = "us-central1"
+#   # zone    = "us-central1-c"
+# }
 
 ## HCP
 
@@ -67,7 +67,7 @@ provider "google" {
 # > Name:
 # > Permissions:
 # > Settings URL: https://portal.cloud.hashicorp.com/access/service-principals?org_id=c3fd7556-9d82-49b1-9138-0207ce01936d&project_id=32bf730d-122a-4e77-888a-1cdbb7eacbde
-provider "hcp" {}
+# provider "hcp" {}
 
 ## Tailscale
 
