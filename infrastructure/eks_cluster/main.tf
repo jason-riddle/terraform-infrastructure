@@ -5,10 +5,10 @@ module "vpc" {
 
   ipv4_primary_cidr_block = "10.0.0.0/16"
 
-  assign_generated_ipv6_cidr_block          = false
-  ipv6_egress_only_internet_gateway_enabled = false
+  assign_generated_ipv6_cidr_block = false
 
-  internet_gateway_enabled = false
+  internet_gateway_enabled                  = false
+  ipv6_egress_only_internet_gateway_enabled = false
 
   context = module.this.context
 }
