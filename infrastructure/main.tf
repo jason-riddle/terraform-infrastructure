@@ -28,10 +28,10 @@ module "label" {
 
 #
 
-module "aws_jason_cli_user" {
-  source  = "./aws_users/aws_jason_cli_user"
-  enabled = false
-}
+# module "aws_jason_cli_user" {
+#   source  = "./aws_users/aws_jason_cli_user"
+#   enabled = false
+# }
 
 # output "jason_access_key_id_ssm_path" {
 #   value = module.aws_jason_cli_user.access_key_id_ssm_path
@@ -43,10 +43,10 @@ module "aws_jason_cli_user" {
 
 #
 
-module "aws_terraform_infrastructure_system_user" {
-  source  = "./aws_users/aws_terraform_infrastructure_system_user"
-  enabled = false
-}
+# module "aws_terraform_infrastructure_system_user" {
+#   source  = "./aws_users/aws_terraform_infrastructure_system_user"
+#   enabled = false
+# }
 
 # output "system_access_key_id_ssm_path" {
 #   value = module.aws_terraform_infrastructure_system_user.access_key_id_ssm_path
@@ -58,10 +58,10 @@ module "aws_terraform_infrastructure_system_user" {
 
 #
 
-module "backup_aws_terraform_infrastructure_system_user" {
-  source  = "./aws_users/backup_aws_terraform_infrastructure_system_user"
-  enabled = false
-}
+# module "backup_aws_terraform_infrastructure_system_user" {
+#   source  = "./aws_users/backup_aws_terraform_infrastructure_system_user"
+#   enabled = false
+# }
 
 # output "backup_system_access_key_id_ssm_path" {
 #   value = module.backup_aws_terraform_infrastructure_system_user.access_key_id_ssm_path
