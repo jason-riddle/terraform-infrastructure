@@ -1,0 +1,3 @@
+namespace = "terraform"
+
+environment = "infrastructure"
