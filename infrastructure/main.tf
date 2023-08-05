@@ -62,10 +62,10 @@ output "system_secret_access_key_ssm_path" {
 
 #
 
-module "aws_terraform_infrastructure_backup_system_user" {
-  source  = "./aws_users/aws_terraform_infrastructure_backup_system_user"
-  enabled = false
-}
+# module "backup_aws_terraform_infrastructure_system_user" {
+#   source  = "./aws_users/aws_terraform_infrastructure_backup_system_user"
+#   enabled = false
+# }
 
 # output "backup_system_access_key_id_ssm_path" {
 #   value     = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
@@ -94,32 +94,22 @@ module "cloudflare_riddleapps_net" {
 ## GitHub
 
 # module "github_ansible_labs" {
-#   source    = "./github/public_repo"
+#   source    = "./github/ansible_labs"
 #   repo_name = "ansible-labs"
 # }
 
-# module "github_dotfiles" {
-#   source    = "./github/public_repo"
-#   repo_name = "dotfiles"
-# }
-
 # module "github_dotv2" {
-#   source    = "./github/public_repo"
+#   source    = "./github/dotv2"
 #   repo_name = "dotv2"
 # }
 
-# module "github_infrastructure" {
-#   source    = "./github/public_repo"
-#   repo_name = "infrastructure"
-# }
-
 # module "github_tailscale_acls" {
-#   source    = "./github/private_repo"
+#   source    = "./github/tailscale_acls"
 #   repo_name = "tailscale-acls"
 # }
 
 # module "github_terraform_infrastructure" {
-#   source    = "./github/public_repo"
+#   source    = "./github/terraform_infrastructure"
 #   repo_name = "terraform-infrastructure"
 # }
 
@@ -127,13 +117,8 @@ module "cloudflare_riddleapps_net" {
 
 module "google_gcp_service_accounts" {
   source  = "./google_gcp_service_accounts"
-  enabled = true
+  enabled = false
 }
-
-# module "google_gcp_service_accounts_modules" {
-#   source  = "./google_gcp_service_accounts_modules"
-#   enabled = true
-# }
 
 ## Kubernetes
 

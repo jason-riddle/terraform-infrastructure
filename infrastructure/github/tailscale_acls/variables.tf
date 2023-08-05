@@ -1,4 +1,4 @@
 variable "repo_name" {
   type    = string
-  default = ""
+  default = "tailscale-acls"
 }
