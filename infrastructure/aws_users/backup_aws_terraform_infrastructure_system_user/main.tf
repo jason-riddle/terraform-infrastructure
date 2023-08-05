@@ -9,7 +9,7 @@ module "label" {
   environment = "infrastructure"
 }
 
-module "aws_terraform_infrastructure_backup_system_user" {
+module "backup_aws_terraform_infrastructure_system_user" {
   source  = "cloudposse/iam-system-user/aws"
   version = "1.1.0"
   enabled = var.enabled
@@ -28,12 +28,12 @@ module "aws_terraform_infrastructure_backup_system_user" {
 
 ## Output
 
-output "access_key_id_ssm_path" {
-  value     = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
+output "backup_access_key_id_ssm_path" {
+  value     = module.backup_aws_terraform_infrastructure_system_user.access_key_id_ssm_path
   sensitive = true
 }
 
-output "secret_access_key_ssm_path" {
-  value     = module.aws_terraform_infrastructure_backup_system_user.secret_access_key_ssm_path
+output "backup_secret_access_key_ssm_path" {
+  value     = module.backup_aws_terraform_infrastructure_system_user.secret_access_key_ssm_path
   sensitive = true
 }

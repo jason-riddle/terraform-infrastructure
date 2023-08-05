@@ -118,10 +118,10 @@ module "google_gcp_service_accounts" {
 
 ## Kubernetes
 
-module "k8s_cluster" {
-  source  = "./k8s_cluster"
-  enabled = false
-}
+# module "k8s_cluster" {
+#   source  = "./k8s_cluster"
+#   enabled = false
+# }
 
 # module "k8s_manifests" {
 #   source  = "./k8s_manifests"
@@ -174,10 +174,10 @@ output "tailscale_ansible_role_tailscale_github_ci_authkey" {
 
 ## Vault
 
-module "vault_cluster" {
-  source  = "./vault_cluster"
-  enabled = false
-}
+# module "vault_cluster" {
+#   source  = "./vault_cluster"
+#   enabled = false
+# }
 
 # module "vault_manifests" {
 #   source  = "./vault_manifests"
