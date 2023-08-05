@@ -39,7 +39,7 @@ data "cloudflare_zone" "jasonriddle_com" {
 }
 
 resource "cloudflare_page_rule" "wp_admin" {
-  count = 0
+  count = 1
 
   zone_id  = data.cloudflare_zone.jasonriddle_com.id
   target   = "*jasonriddle.com/wp-admin*"
@@ -134,12 +134,16 @@ resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
 #
 
 resource "tailscale_dns_preferences" "dns_preferences" {
+  count = 1
+
   magic_dns = true
 }
 
 #
 
 resource "tailscale_tailnet_key" "raspberry_pi_authkey" {
+  count = 1
+
   reusable      = true
   ephemeral     = false
   preauthorized = true
@@ -148,11 +152,13 @@ resource "tailscale_tailnet_key" "raspberry_pi_authkey" {
 }
 
 output "tailscale_raspberry_pi_authkey" {
-  value     = tailscale_tailnet_key.raspberry_pi_authkey.key
+  value     = tailscale_tailnet_key.raspberry_pi_authkey[0].key
   sensitive = true
 }
 
 resource "tailscale_tailnet_key" "ansible_role_tailscale_github_ci_authkey" {
+  count = 1
+
   reusable      = true
   ephemeral     = true
   preauthorized = true
@@ -161,7 +167,7 @@ resource "tailscale_tailnet_key" "ansible_role_tailscale_github_ci_authkey" {
 }
 
 output "tailscale_ansible_role_tailscale_github_ci_authkey" {
-  value     = tailscale_tailnet_key.ansible_role_tailscale_github_ci_authkey.key
+  value     = tailscale_tailnet_key.ansible_role_tailscale_github_ci_authkey[0].key
   sensitive = true
 }
 
