@@ -1,13 +1,13 @@
 ## Label
 
-module "label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
-  enabled = true
+# module "label" {
+#   source  = "cloudposse/label/null"
+#   version = "0.25.0"
+#   enabled = true
 
-  namespace   = "terraform"
-  environment = "infrastructure"
-}
+#   namespace   = "terraform"
+#   environment = "infrastructure"
+# }
 
 ## AWS
 
@@ -29,6 +29,8 @@ module "label" {
 module "aws_eks_cluster" {
   source  = "./aws_eks_cluster"
   enabled = true
+
+  context = module.this.context
 }
 
 ## Cloudflare
