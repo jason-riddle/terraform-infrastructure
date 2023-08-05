@@ -30,29 +30,26 @@ module "label" {
 
 module "aws_jason_cli_user" {
   source  = "./aws_users/aws_jason_cli_user"
-  enabled = true
+  enabled = false
 }
 
 output "jason_access_key_id_ssm_path" {
-  value     = module.aws_jason_cli_user.access_key_id_ssm_path
-  sensitive = true
+  value = module.aws_jason_cli_user.access_key_id_ssm_path
 }
 
 output "jason_secret_access_key_ssm_path" {
-  value     = module.aws_jason_cli_user.secret_access_key_ssm_path
-  sensitive = true
+  value = module.aws_jason_cli_user.secret_access_key_ssm_path
 }
 
 #
 
 module "aws_terraform_infrastructure_system_user" {
   source  = "./aws_users/aws_terraform_infrastructure_system_user"
-  enabled = true
+  enabled = false
 }
 
 output "system_access_key_id_ssm_path" {
-  value     = module.aws_terraform_infrastructure_system_user.access_key_id_ssm_path
-  sensitive = true
+  value = module.aws_terraform_infrastructure_system_user.access_key_id_ssm_path
 }
 
 output "system_secret_access_key_ssm_path" {
@@ -67,15 +64,13 @@ output "system_secret_access_key_ssm_path" {
 #   enabled = false
 # }
 
-# output "backup_system_access_key_id_ssm_path" {
-#   value     = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
-#   sensitive = true
-# }
+output "backup_system_access_key_id_ssm_path" {
+  value = module.aws_terraform_infrastructure_backup_system_user.access_key_id_ssm_path
+}
 
-# output "backup_system_secret_access_key_ssm_path" {
-#   value     = module.aws_terraform_infrastructure_backup_system_user.secret_access_key_ssm_path
-#   sensitive = true
-# }
+output "backup_system_secret_access_key_ssm_path" {
+  value = module.aws_terraform_infrastructure_backup_system_user.secret_access_key_ssm_path
+}
 
 ## Cloudflare
 
