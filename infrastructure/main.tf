@@ -26,8 +26,8 @@
 
 #
 
-module "aws_eks_cluster" {
-  source  = "./aws_eks_cluster"
+module "eks_cluster" {
+  source  = "./eks_cluster"
   enabled = true
 
   context = module.this.context
