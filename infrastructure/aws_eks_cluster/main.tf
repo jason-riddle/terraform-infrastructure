@@ -16,9 +16,11 @@ module "aws_eks_vpc" {
   version = "2.1.0"
   enabled = var.enabled
 
-  cidr_block = "172.16.0.0/16"
+  ipv4_primary_cidr_block = "10.0.0.0/16"
 
   ipv6_egress_only_internet_gateway_enabled = false
+
+  assign_generated_ipv6_cidr_block = false
 
   context = module.label.context
 }
@@ -34,6 +36,8 @@ module "subnets" {
 
   nat_gateway_enabled  = false
   nat_instance_enabled = false
+
+  # cidr_block = "10.0.0.0/16"
 
   context = module.label.context
 }
