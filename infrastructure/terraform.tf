@@ -42,10 +42,10 @@ terraform {
     #   version = ">= 0.66.0"
     # }
     # DOCS: https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-    # tailscale = {
-    #   source  = "tailscale/tailscale"
-    #   version = ">= 0.13.7"
-    # }
+    tailscale = {
+      source  = "tailscale/tailscale"
+      version = ">= 0.13.7"
+    }
     # DOCS: https://registry.terraform.io/providers/hashicorp/vault/latest/docs
     # vault = {
     #   source  = "hashicorp/vault"
