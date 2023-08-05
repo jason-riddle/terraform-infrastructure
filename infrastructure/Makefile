@@ -32,9 +32,10 @@ console: init_null
 ls:
 	devenv shell -- terraform state list
 
-# rm:
-# 	devenv shell -- terraform state rm module.aws_tfc_role.data.tls_certificate.tfc_certificate
-# 	devenv shell -- terraform state rm module.aws_tfc_role.aws_iam_openid_connect_provider.tfc_provider[0]
-# 	devenv shell -- terraform state rm module.aws_tfc_role.aws_iam_policy.tfc_policy[0]
-# 	devenv shell -- terraform state rm module.aws_tfc_role.aws_iam_role.tfc_role[0]
-# 	devenv shell -- terraform state rm module.aws_tfc_role.aws_iam_role_policy_attachment.tfc_policy_attachment[0]
+rm:
+	devenv shell -- \
+		terraform state rm \
+			module.aws_tfc_role.aws_iam_role_policy_attachment.tfc_policy_attachment[0] \
+			module.aws_tfc_role.data.tls_certificate.tfc_certificate \
+			module.aws_tfc_role.aws_iam_policy.tfc_policy[0] \
+			module.aws_tfc_role.aws_iam_role.tfc_role[0]
