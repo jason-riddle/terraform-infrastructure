@@ -18,8 +18,9 @@ module "subnets" {
   version = "2.4.1"
   enabled = var.enabled
 
-  vpc_id     = module.vpc.vpc_id
-  igw_id     = module.vpc.igw_id
+  vpc_id = module.vpc.vpc_id
+  igw_id = module.vpc.igw_id
+
   # cidr_block = module.vpc.vpc_cidr_block
 
   nat_gateway_enabled  = false
