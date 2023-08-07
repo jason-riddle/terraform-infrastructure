@@ -2,7 +2,7 @@
 
 module "eks_cluster" {
   source  = "./eks_cluster"
-  enabled = true
+  enabled = false
 
   context = module.this.context
 }
