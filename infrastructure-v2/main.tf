@@ -1,4 +1,4 @@
 # Cloudflare
 module "jasonriddle_com" {
-  source = "./environments/cloudflare/zones/jasonriddle_com"
+  source = "./cloudflare/zones/jasonriddle_com"
 }
