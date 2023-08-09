@@ -1,3 +1,3 @@
-data "cloudflare_zone" "riddleapps_net" {
+data "cloudflare_zone" "zone" {
   name = "riddleapps.net"
 }
