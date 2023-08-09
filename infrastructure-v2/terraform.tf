@@ -15,13 +15,13 @@ terraform {
 }
 
 # Tailscale
-
-# Set:
-# - `TAILSCALE_API_KEY`
-# - `TAILSCALE_TAILNET`
 #
 # Docs:
 # - https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
+#
+# Export:
+# - `TAILSCALE_API_KEY`
+# - `TAILSCALE_TAILNET`
 #
 # Credentials:
 # - Name:
