@@ -21,6 +21,6 @@ resource "github_branch_protection" "main" {
 
 resource "github_actions_secret" "secret" {
   repository      = data.github_repository.repo.name
-  secret_name     = "example_secret_name"
+  secret_name     = "EXAMPLE_SECRET_NAME"
   plaintext_value = "123"
 }
