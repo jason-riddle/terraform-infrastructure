@@ -31,8 +31,8 @@ resource "github_repository_environment" "environment" {
 #   plaintext_value = "%s"
 # }
 
-# resource "github_actions_secret" "secret" {
-#   repository      = "example_repository"
-#   secret_name     = "example_secret_name"
-#   plaintext_value = "123"
-# }
+resource "github_actions_secret" "secret" {
+  repository      = data.github_repository.repo.name
+  secret_name     = "example_secret_name"
+  plaintext_value = "123"
+}
