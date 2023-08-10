@@ -19,18 +19,6 @@ resource "github_branch_protection" "main" {
   }
 }
 
-# resource "github_repository_environment" "environment" {
-#   repository  = data.github_repository.repo.name
-#   environment = "environment"
-# }
-
-# resource "github_actions_environment_secret" "secret" {
-#   repository      = data.github_repository.repo.name
-#   environment     = github_repository_environment.environment.environment
-#   secret_name     = "secret_name"
-#   plaintext_value = "%s"
-# }
-
 resource "github_actions_secret" "secret" {
   repository      = data.github_repository.repo.name
   secret_name     = "example_secret_name"
