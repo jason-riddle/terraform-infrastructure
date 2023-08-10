@@ -27,4 +27,3 @@ output "tailscale_ansible_role_tailscale_github_ci_authkey" {
   value     = tailscale_tailnet_key.ansible_role_tailscale_github_ci_authkey[0].key
   sensitive = true
 }
-
