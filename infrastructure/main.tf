@@ -10,6 +10,9 @@ module "cf_riddleapps_net" {
 # Github
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
+
+  secret_name            = "FOO"
+  secret_plaintext_value = "BAR"
 }
 
 # Tailscale
