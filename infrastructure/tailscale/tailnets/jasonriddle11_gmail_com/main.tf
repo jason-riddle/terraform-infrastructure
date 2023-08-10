@@ -13,17 +13,17 @@ output "pi_authkey" {
   sensitive = true
 }
 
-resource "tailscale_tailnet_key" "ansible_role_tailscale_github_ci_authkey" {
+resource "tailscale_tailnet_key" "github_actions_authkey" {
   count = 1
 
   reusable      = true
   ephemeral     = true
   preauthorized = true
   expiry        = 7776000 # 90 Days
-  tags          = ["tag:github-ci"]
+  tags          = ["tag:github-actions"]
 }
 
-output "tailscale_ansible_role_tailscale_github_ci_authkey" {
-  value     = tailscale_tailnet_key.ansible_role_tailscale_github_ci_authkey[0].key
+output "github_actions_authkey" {
+  value     = tailscale_tailnet_key.github_actions_authkey[0].key
   sensitive = true
 }
