@@ -32,7 +32,7 @@ resource "github_actions_environment_secret" "secret" {
 }
 
 resource "github_actions_secret" "secret" {
-  repository       = "example_repository"
-  secret_name      = "example_secret_name"
-  plaintext_value  = "123"
+  repository      = "example_repository"
+  secret_name     = "example_secret_name"
+  plaintext_value = "123"
 }
