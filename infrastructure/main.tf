@@ -8,6 +8,13 @@ module "cf_riddleapps_net" {
 }
 
 # Github
+module "gh_ansible_role_tailscale" {
+  source = "./github/repos/ansible_role_tailscale"
+
+  secret_name            = "FOO"
+  secret_plaintext_value = "BAR"
+}
+
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
 
