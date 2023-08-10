@@ -12,7 +12,7 @@ module "gh_ansible_role_tailscale" {
   source = "./github/repos/ansible_role_tailscale"
 
   secret_name            = "FOO"
-  secret_plaintext_value = "BAR"
+  secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_authkey
 }
 
 module "gh_terraform_infrastructure" {
