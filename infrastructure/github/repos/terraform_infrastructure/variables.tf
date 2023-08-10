@@ -4,6 +4,7 @@ variable "secret_name" {
 }
 
 variable "secret_plaintext_value" {
-  type    = string
-  default = "123"
+  type      = string
+  default   = "123"
+  sensitive = true
 }
