@@ -5,7 +5,7 @@ data "cloudflare_zone" "zone" {
 resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
   count = 1
 
-  zone_id = data.cloudflare_zone.riddleapps_net.id
+  zone_id = data.cloudflare_zone.zone.id
   name    = "nextcloud"
   value   = "nx15310.your-storageshare.de"
   type    = "CNAME"
