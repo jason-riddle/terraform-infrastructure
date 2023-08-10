@@ -17,6 +17,12 @@ terraform {
     }
 
     # Docs:
+    # - https://registry.terraform.io/providers/integrations/github/latest/docs
+    github = {
+      source = "integrations/github"
+    }
+
+    # Docs:
     # - https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
     tailscale = {
       source = "tailscale/tailscale"
