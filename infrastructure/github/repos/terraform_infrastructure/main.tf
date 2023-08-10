@@ -19,10 +19,10 @@ data "github_repository" "repo" {
 #   }
 # }
 
-resource "github_repository_environment" "environment" {
-  repository  = data.github_repository.repo.name
-  environment = "environment"
-}
+# resource "github_repository_environment" "environment" {
+#   repository  = data.github_repository.repo.name
+#   environment = "environment"
+# }
 
 # resource "github_actions_environment_secret" "secret" {
 #   repository      = data.github_repository.repo.name
