@@ -3,6 +3,11 @@ module "cf_jasonriddle_com" {
   source = "./cloudflare/zones/jasonriddle_com"
 }
 
+# Cloudflare
+module "cf_riddleapps_net" {
+  source = "./cloudflare/zones/riddleapps_net"
+}
+
 # Github
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
