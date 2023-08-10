@@ -11,7 +11,7 @@ module "cf_riddleapps_net" {
 module "gh_ansible_role_tailscale" {
   source = "./github/repos/ansible_role_tailscale"
 
-  secret_name            = "FOOBAR_TAILSCALE_AUTHKEY"
+  secret_name            = "TAILSCALE_AUTHKEY"
   secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_authkey
 }
 
