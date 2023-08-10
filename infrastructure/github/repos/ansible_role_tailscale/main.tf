@@ -21,6 +21,6 @@ data "github_repository" "repo" {
 
 resource "github_actions_secret" "secret" {
   repository      = data.github_repository.repo.name
-  secret_name     = "EXAMPLE_SECRET_NAME"
-  plaintext_value = "123"
+  secret_name     = var.secret_name
+  plaintext_value = var.secret_plaintext_value
 }
