@@ -46,6 +46,20 @@ terraform {
 # - Settings URL: https://dash.cloudflare.com/profile/api-tokens
 provider "cloudflare" {}
 
+# Github
+#
+# Docs:
+# - https://registry.terraform.io/providers/integrations/github/latest/docs
+#
+# Export:
+# - `GITHUB_TOKEN`
+#
+# Credentials
+# - Name: terraform-infrastructure-system-user
+# - Permissions: public_repo, read:org
+# - Settings URL: https://github.com/settings/tokens/1270530699
+provider "github" {}
+
 # Tailscale
 #
 # Docs:
