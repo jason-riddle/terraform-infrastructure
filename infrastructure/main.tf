@@ -12,3 +12,8 @@ output "ts_pi_authkey" {
   value     = ts_jasonriddle11_gmail_com.pi_authkey
   sensitive = true
 }
+
+output "ts_github_actions_authkey" {
+  value     = ts_jasonriddle11_gmail_com.github_actions_authkey
+  sensitive = true
+}
