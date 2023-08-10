@@ -1,4 +1,4 @@
-resource "tailscale_tailnet_key" "raspberry_pi_authkey" {
+resource "tailscale_tailnet_key" "pi_authkey" {
   count = 1
 
   reusable      = true
@@ -8,8 +8,8 @@ resource "tailscale_tailnet_key" "raspberry_pi_authkey" {
   tags          = ["tag:pi"]
 }
 
-output "tailscale_raspberry_pi_authkey" {
-  value     = tailscale_tailnet_key.raspberry_pi_authkey[0].key
+output "pi_authkey" {
+  value     = tailscale_tailnet_key.pi_authkey[0].key
   sensitive = true
 }
 
