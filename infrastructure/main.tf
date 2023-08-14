@@ -36,3 +36,9 @@ output "ts_github_actions_authkey" {
   value     = module.ts_jasonriddle11_gmail_com.github_actions_authkey
   sensitive = true
 }
+
+## GCP
+
+module "gcp_projects_default" {
+  source = "./cloud/gcp/projects/default"
+}
