@@ -2,6 +2,11 @@ locals {
   project_id = "starlit-factor-394405"
 }
 
+# Show all roles and permissions.
+#
+# gcloud beta asset search-all-iam-policies \
+#   --scope='projects/starlit-factor-394405' \
+#   --query='policy:sa-example-account-id@starlit-factor-394405.iam.gserviceaccount.com'
 resource "google_service_account" "service_account" {
   account_id   = "sa-example-account-id"
   display_name = "Service Account Example Name"
