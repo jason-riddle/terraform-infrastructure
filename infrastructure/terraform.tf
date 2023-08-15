@@ -21,12 +21,6 @@ terraform {
     github = {
       source = "integrations/github"
     }
-
-    # Docs:
-    # - https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-    tailscale = {
-      source = "tailscale/tailscale"
-    }
   }
 }
 
@@ -59,17 +53,3 @@ provider "cloudflare" {}
 # - Permissions: public_repo, read:org
 # - Settings URL: https://github.com/settings/tokens/1270530699
 provider "github" {}
-
-# Tailscale
-#
-# Docs:
-# - https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-#
-# Export:
-# - `TAILSCALE_API_KEY` and `TAILSCALE_TAILNET`
-#
-# Credentials:
-# - Name:
-# - Permissions:
-# - Settings URL: https://login.tailscale.com/admin/settings/keys
-provider "tailscale" {}
