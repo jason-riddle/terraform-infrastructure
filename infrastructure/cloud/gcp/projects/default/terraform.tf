@@ -7,3 +7,9 @@ terraform {
     }
   }
 }
+
+provider "google" {
+  project = "starlit-factor-394405"
+  # region  = "us-central1"
+  # zone    = "us-central1-c"
+}
