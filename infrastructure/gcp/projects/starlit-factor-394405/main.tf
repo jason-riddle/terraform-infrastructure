@@ -21,8 +21,8 @@ resource "google_service_account_key" "key" {
 
 # https://cloud.google.com/iam/docs/understanding-roles
 
-# resource "google_project_iam_member" "binding" {
-#   project = local.project_id
-#   role    = "roles/viewer"
-#   member  = google_service_account.service_account.member
-# }
+resource "google_project_iam_member" "binding" {
+  project = local.project_id
+  role    = "roles/iam.roleViewer"
+  member  = google_service_account.service_account.member
+}
