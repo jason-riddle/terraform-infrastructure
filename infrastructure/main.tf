@@ -37,8 +37,7 @@ output "ts_github_actions_authkey" {
   sensitive = true
 }
 
-## GCP
-
+# GCP
 module "gcp_projects_default" {
   source = "./cloud/gcp/projects/default"
 }
