@@ -1,3 +1,7 @@
+locals {
+  project_id = "starlit-factor-394405"
+}
+
 resource "google_service_account" "service_account" {
   account_id   = "service-account-example-id"
   display_name = "Service Account Example Name"
@@ -13,4 +17,10 @@ resource "google_service_account_key" "key" {
   keepers = {
     rotation_time = time_rotating.rotation.rotation_rfc3339
   }
+}
+
+resource "google_project_iam_member" "binding" {
+  project = local.project_id
+  role    = "roles/aiplatform.admin"
+  member  = google_service_account.service_account.member
 }
