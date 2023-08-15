@@ -5,7 +5,11 @@ locals {
 # View all roles and permissions in the GCP console.
 #
 # https://console.cloud.google.com/iam-admin/iam?project=starlit-factor-394405
+
+# Understanding roles resources.
 #
+# https://cloud.google.com/iam/docs/understanding-roles
+
 # Show all roles and permissions via the gcloud cli tool.
 #
 # gcloud beta asset search-all-iam-policies \
@@ -27,8 +31,6 @@ resource "google_service_account_key" "key" {
     rotation_time = time_rotating.rotation.rotation_rfc3339
   }
 }
-
-# https://cloud.google.com/iam/docs/understanding-roles
 
 resource "google_project_iam_member" "binding" {
   project = local.project_id
