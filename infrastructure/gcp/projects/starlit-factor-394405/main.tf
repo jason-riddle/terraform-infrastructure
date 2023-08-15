@@ -2,7 +2,11 @@ locals {
   project_id = "starlit-factor-394405"
 }
 
-# Show all roles and permissions.
+# View all roles and permissions in the GCP console.
+#
+# https://console.cloud.google.com/iam-admin/iam?project=starlit-factor-394405
+#
+# Show all roles and permissions via the gcloud cli tool.
 #
 # gcloud beta asset search-all-iam-policies \
 #   --scope='projects/starlit-factor-394405' \
