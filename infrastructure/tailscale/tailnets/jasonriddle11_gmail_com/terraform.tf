@@ -22,4 +22,4 @@ terraform {
 # - Name:
 # - Permissions:
 # - Settings URL: https://login.tailscale.com/admin/settings/keys
-provider "tailscale" {}
+# provider "tailscale" {}
