@@ -37,6 +37,11 @@ output "ts_github_actions_authkey" {
   sensitive = true
 }
 
+# AWS
+module "aws_accounts_personal" {
+  source = "./aws/accounts/personal"
+}
+
 # GCP
 module "gcp_projects_starlit_factor_394405" {
   source = "./gcp/projects/starlit-factor-394405"
