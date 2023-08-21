@@ -43,9 +43,9 @@ output "ts_k3s_subnet_router_authkey" {
 }
 
 # Azure
-module "azure_subscriptions_default" {
-  source = "./azure/subscriptions/default"
-}
+# module "azure_subscriptions_default" {
+#   source = "./azure/subscriptions/default"
+# }
 
 # AWS
 module "aws_accounts_personal" {
