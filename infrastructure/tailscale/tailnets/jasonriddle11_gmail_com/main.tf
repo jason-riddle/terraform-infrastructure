@@ -32,10 +32,10 @@ resource "tailscale_tailnet_key" "k3s_subnet_router_authkey" {
   count = 1
 
   reusable      = true
-  ephemeral     = true
+  ephemeral     = false
   preauthorized = true
   expiry        = 7776000 # 90 Days
-  # tags          = ["tag:github-actions"]
+  tags          = ["tag:k3s"]
 }
 
 output "k3s_subnet_router_authkey" {
