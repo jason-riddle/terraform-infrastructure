@@ -15,7 +15,7 @@ locals {
 # gcloud beta asset search-all-iam-policies \
 #   --scope='projects/starlit-factor-394405' \
 #   --query='policy:sa-example-account-id@starlit-factor-394405.iam.gserviceaccount.com'
-resource "google_service_account" "service_account" {
+resource "google_service_account" "account" {
   account_id   = "sa-example-account-id"
   display_name = "Service Account Example Name"
 }
@@ -25,7 +25,7 @@ resource "time_rotating" "rotation" {
 }
 
 resource "google_service_account_key" "key" {
-  service_account_id = google_service_account.service_account.name
+  service_account_id = google_service_account.account.name
 
   keepers = {
     rotation_time = time_rotating.rotation.rotation_rfc3339
@@ -35,5 +35,5 @@ resource "google_service_account_key" "key" {
 resource "google_project_iam_member" "binding" {
   project = local.project_id
   role    = "roles/iam.roleViewer"
-  member  = google_service_account.service_account.member
+  member  = google_service_account.account.member
 }
