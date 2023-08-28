@@ -12,7 +12,7 @@ module "gh_ansible_role_tailscale" {
   source = "./github/repos/ansible_role_tailscale"
 
   secret_name            = "TAILSCALE_AUTHKEY"
-  secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_authkey
+  secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
 }
 
 module "gh_terraform_infrastructure" {
@@ -32,8 +32,18 @@ output "ts_pi_authkey" {
   sensitive = true
 }
 
+output "ts_pi_cluster_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
+  sensitive = true
+}
+
 output "ts_github_actions_authkey" {
   value     = module.ts_jasonriddle11_gmail_com.github_actions_authkey
+  sensitive = true
+}
+
+output "ts_github_actions_ansible_role_tailscale_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
   sensitive = true
 }
 
