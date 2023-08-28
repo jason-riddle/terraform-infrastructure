@@ -27,23 +27,13 @@ module "ts_jasonriddle11_gmail_com" {
   source = "./tailscale/tailnets/jasonriddle11_gmail_com"
 }
 
-output "ts_pi_authkey" {
-  value     = module.ts_jasonriddle11_gmail_com.pi_authkey
+output "ts_github_actions_ansible_role_tailscale_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
   sensitive = true
 }
 
 output "ts_pi_cluster_authkey" {
   value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
-  sensitive = true
-}
-
-output "ts_github_actions_authkey" {
-  value     = module.ts_jasonriddle11_gmail_com.github_actions_authkey
-  sensitive = true
-}
-
-output "ts_github_actions_ansible_role_tailscale_authkey" {
-  value     = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
   sensitive = true
 }
 
