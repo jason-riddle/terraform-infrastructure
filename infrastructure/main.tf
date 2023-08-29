@@ -48,6 +48,6 @@ module "aws_accounts_personal" {
 }
 
 # GCP
-module "gcp_projects_starlit_factor_394405" {
-  source = "./gcp/projects/starlit-factor-394405"
-}
+# module "gcp_projects_starlit_factor_394405" {
+#   source = "./gcp/projects/starlit-factor-394405"
+# }
