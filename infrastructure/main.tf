@@ -37,6 +37,11 @@ output "ts_pi_cluster_authkey" {
   sensitive = true
 }
 
+output "ts_subnet_router_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.subnet_router_authkey
+  sensitive = true
+}
+
 # Azure
 # module "azure_subscriptions_default" {
 #   source = "./azure/subscriptions/default"
