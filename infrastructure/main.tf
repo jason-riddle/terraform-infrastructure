@@ -9,7 +9,7 @@ module "cf_riddleapps_net" {
 
 # Digitalocean
 module "do" {
-  source  = "./digitalocean/default"
+  source  = "./digitalocean/k8s_cluster"
   enabled = false
 }
 
