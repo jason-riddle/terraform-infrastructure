@@ -17,9 +17,6 @@ module "gh_ansible_role_tailscale" {
 
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
-
-  # secret_name            = "FOO"
-  # secret_plaintext_value = "BAR"
 }
 
 # Tailscale
@@ -36,11 +33,6 @@ output "ts_pi_cluster_authkey" {
   value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
   sensitive = true
 }
-
-# output "ts_subnet_router_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.subnet_router_authkey
-#   sensitive = true
-# }
 
 # AWS
 module "aws_accounts_personal" {
