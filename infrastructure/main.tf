@@ -46,8 +46,3 @@ output "ts_pi_cluster_authkey" {
 module "aws_accounts_personal" {
   source = "./aws/accounts/personal"
 }
-
-# GCP
-# module "gcp_projects_starlit_factor_394405" {
-#   source = "./gcp/projects/starlit-factor-394405"
-# }
