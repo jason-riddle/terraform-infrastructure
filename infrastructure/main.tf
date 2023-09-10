@@ -18,8 +18,8 @@ module "gh_ansible_role_tailscale" {
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
 
-  secret_name            = "FOO"
-  secret_plaintext_value = "BAR"
+  # secret_name            = "FOO"
+  # secret_plaintext_value = "BAR"
 }
 
 # Tailscale

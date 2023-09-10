@@ -19,8 +19,8 @@ resource "github_branch_protection" "main" {
   }
 }
 
-resource "github_actions_secret" "secret" {
-  repository      = data.github_repository.repo.name
-  secret_name     = var.secret_name
-  plaintext_value = var.secret_plaintext_value
-}
+# resource "github_actions_secret" "secret" {
+#   repository      = data.github_repository.repo.name
+#   secret_name     = var.secret_name
+#   plaintext_value = var.secret_plaintext_value
+# }
