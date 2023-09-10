@@ -7,6 +7,32 @@ module "cf_riddleapps_net" {
   source = "./cloudflare/zones/riddleapps_net"
 }
 
+# Digitalocean
+module "do" {
+  source  = "./digitalocean/default"
+  enabled = false
+}
+
+output "do_k8s_cluster_kube_config" {
+  value     = module.do.k8s_cluster_kube_config
+  sensitive = true
+}
+
+output "do_k8s_cluster_kube_config_token" {
+  value     = module.do.k8s_cluster_kube_config_token
+  sensitive = true
+}
+
+output "do_k8s_cluster_ca_certificate" {
+  value     = module.do.k8s_cluster_ca_certificate
+  sensitive = true
+}
+
+output "do_k8s_cluster_endpoint" {
+  value     = module.do.k8s_cluster_endpoint
+  sensitive = true
+}
+
 # Github
 module "gh_ansible_role_tailscale" {
   source = "./github/repos/ansible_role_tailscale"
