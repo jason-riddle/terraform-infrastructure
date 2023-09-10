@@ -42,11 +42,6 @@ output "ts_pi_cluster_authkey" {
 #   sensitive = true
 # }
 
-# Azure
-# module "azure_subscriptions_default" {
-#   source = "./azure/subscriptions/default"
-# }
-
 # AWS
 module "aws_accounts_personal" {
   source = "./aws/accounts/personal"
