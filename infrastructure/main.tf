@@ -10,7 +10,7 @@ module "cf_riddleapps_net" {
 # Digitalocean
 module "do" {
   source  = "./digitalocean/k8s_cluster"
-  enabled = true
+  enabled = false
 }
 
 output "do_k8s_cluster_kube_config" {
