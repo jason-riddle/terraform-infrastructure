@@ -44,7 +44,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
-        # Always replace auth keys since there isn't an time-based way to do so.
+        # TODO: Always replace auth keys since there isn't an time-based way to do so.
         # See: https://github.com/tailscale/terraform-provider-tailscale/issues/144#issuecomment-1566261050
         run: |
           terraform plan -no-color -input=false \
