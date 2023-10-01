@@ -67,10 +67,10 @@ output "ts_homelab_authkey" {
   sensitive = true
 }
 
-# output "ts_pi_cluster_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
-#   sensitive = true
-# }
+output "ts_pi_cluster_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
+  sensitive = true
+}
 
 # AWS
 module "aws_accounts_personal" {
