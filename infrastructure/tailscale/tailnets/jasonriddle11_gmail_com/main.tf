@@ -20,7 +20,7 @@ resource "tailscale_tailnet_key" "homelab_authkey" {
   ephemeral     = false
   preauthorized = true
   expiry        = 7776000 # 90 Days
-  # tags          = ["tag:pi-cluster"]
+  tags          = ["tag:homelab"]
 }
 
 output "homelab_authkey" {
