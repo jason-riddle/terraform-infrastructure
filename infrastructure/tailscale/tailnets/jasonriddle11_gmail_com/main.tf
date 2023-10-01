@@ -13,6 +13,21 @@ output "github_actions_ansible_role_tailscale_authkey" {
   sensitive = true
 }
 
+resource "tailscale_tailnet_key" "homelab_authkey" {
+  count = 1
+
+  reusable      = true
+  ephemeral     = false
+  preauthorized = true
+  expiry        = 7776000 # 90 Days
+  # tags          = ["tag:pi-cluster"]
+}
+
+output "homelab_authkey" {
+  value     = tailscale_tailnet_key.homelab_authkey[0].key
+  sensitive = true
+}
+
 # resource "tailscale_tailnet_key" "pi_cluster_authkey" {
 #   count = 1
 

@@ -41,6 +41,13 @@ module "gh_ansible_role_tailscale" {
   secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
 }
 
+module "gh_homelab" {
+  source = "./github/repos/homelab"
+
+  secret_name            = "TAILSCALE_AUTHKEY"
+  # secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
+}
+
 module "gh_terraform_infrastructure" {
   source = "./github/repos/terraform_infrastructure"
 }
@@ -52,6 +59,11 @@ module "ts_jasonriddle11_gmail_com" {
 
 output "ts_github_actions_ansible_role_tailscale_authkey" {
   value     = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
+  sensitive = true
+}
+
+output "ts_homelab_authkey" {
+  value     = module.ts_jasonriddle11_gmail_com.homelab_authkey
   sensitive = true
 }
 
