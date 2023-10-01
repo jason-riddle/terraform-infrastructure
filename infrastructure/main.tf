@@ -44,8 +44,8 @@ module "gh_ansible_role_tailscale" {
 module "gh_homelab" {
   source = "./github/repos/homelab"
 
-  secret_name            = "TAILSCALE_AUTHKEY"
-  # secret_plaintext_value = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
+  secret_name            = "GHA_TAILSCALE_AUTHKEY"
+  secret_plaintext_value = module.ts_jasonriddle11_gmail_com.homelab_authkey
 }
 
 module "gh_terraform_infrastructure" {
