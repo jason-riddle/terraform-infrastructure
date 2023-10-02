@@ -1,6 +1,6 @@
-resource "aws_iam_group" "temp" {
-  name = "temp"
-}
+# resource "aws_iam_group" "temp" {
+#   name = "temp"
+# }
 
 module "oidc_github" {
   source  = "unfunco/oidc-github/aws"
