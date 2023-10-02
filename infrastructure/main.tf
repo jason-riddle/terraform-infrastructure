@@ -57,26 +57,6 @@ module "ts_jasonriddle11_gmail_com" {
   source = "./tailscale/tailnets/jasonriddle11_gmail_com"
 }
 
-# output "ts_github_actions_ansible_role_tailscale_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.github_actions_ansible_role_tailscale_authkey
-#   sensitive = true
-# }
-
-# output "ts_github_actions_homelab_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.github_actions_homelab_authkey
-#   sensitive = true
-# }
-
-# output "ts_homelab_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.homelab_authkey
-#   sensitive = true
-# }
-
-# output "ts_pi_cluster_authkey" {
-#   value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
-#   sensitive = true
-# }
-
 # AWS
 module "aws_accounts_personal" {
   source = "./aws/accounts/personal"
