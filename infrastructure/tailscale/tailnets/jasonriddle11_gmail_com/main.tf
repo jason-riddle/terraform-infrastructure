@@ -3,7 +3,7 @@
 resource "tailscale_tailnet_key" "github_actions_ansible_role_tailscale_authkey" {
   count = 1
 
-  description = "https://github.com/jason-riddle/ansible-role-tailscale/settings/secrets/actions"
+  description = "GHA - Ansible Role Tailscale Authkey"
 
   reusable      = true
   ephemeral     = true
@@ -20,7 +20,7 @@ output "github_actions_ansible_role_tailscale_authkey" {
 resource "tailscale_tailnet_key" "github_actions_homelab_authkey" {
   count = 1
 
-  description = "https://github.com/jason-riddle/homelab/settings/secrets/actions"
+  description = "GHA - Homelab Authkey"
 
   reusable      = true
   ephemeral     = true
@@ -39,7 +39,7 @@ output "github_actions_homelab_authkey" {
 resource "tailscale_tailnet_key" "pi_cluster_authkey" {
   count = 1
 
-  description = "https://github.com/jason-riddle/homelab"
+  description = "Pi Cluster Authkey"
 
   reusable      = true
   ephemeral     = false
