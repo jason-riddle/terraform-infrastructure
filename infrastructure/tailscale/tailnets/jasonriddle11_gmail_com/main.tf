@@ -1,3 +1,5 @@
+# Ephemeral
+
 resource "tailscale_tailnet_key" "github_actions_ansible_role_tailscale_authkey" {
   count = 1
 
@@ -25,5 +27,22 @@ resource "tailscale_tailnet_key" "github_actions_homelab_authkey" {
 
 output "github_actions_homelab_authkey" {
   value     = tailscale_tailnet_key.github_actions_homelab_authkey[0].key
+  sensitive = true
+}
+
+# Not Ephemeral
+
+resource "tailscale_tailnet_key" "pi_cluster_authkey" {
+  count = 1
+
+  reusable      = true
+  ephemeral     = false
+  preauthorized = true
+  expiry        = 7776000 # 90 Days
+  tags          = ["tag:pi_cluster"]
+}
+
+output "pi_cluster_authkey" {
+  value     = tailscale_tailnet_key.pi_cluster_authkey[0].key
   sensitive = true
 }
