@@ -45,7 +45,7 @@ resource "tailscale_tailnet_key" "pi_cluster_authkey" {
   ephemeral     = false
   preauthorized = true
   expiry        = 7776000 # 90 Days
-  tags          = ["tag:pi_cluster"]
+  tags          = ["tag:pi-cluster"]
 }
 
 output "pi_cluster_authkey" {
