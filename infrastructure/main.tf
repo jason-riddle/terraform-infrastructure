@@ -3,15 +3,6 @@ module "aws" {
   source = "./aws/accounts/personal"
 }
 
-# Cloudflare
-module "cf_jasonriddle_com" {
-  source = "./cloudflare/zones/jasonriddle_com"
-}
-
-module "cf_riddleapps_net" {
-  source = "./cloudflare/zones/riddleapps_net"
-}
-
 # Github
 module "gh_ansible_role_tailscale" {
   source = "./github/repos/ansible_role_tailscale"
