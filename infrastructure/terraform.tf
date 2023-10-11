@@ -10,26 +10,25 @@ terraform {
   }
 
   required_providers {
-    # https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-    # https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users/details/Jason-AWSCLI?section=permissions
-    # AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+    # DOCS: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+    # ENVS: AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+    # CRED: https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users/details/Jason-AWSCLI?section=permissions
     aws = {
       source = "hashicorp/aws"
     }
 
-    # https://registry.terraform.io/providers/integrations/github/latest/docs
-    # https://registry.terraform.io/providers/integrations/github/latest/docs
-    # GITHUB_TOKEN
-    # https://github.com/settings/tokens/1270530699
-    # Name: terraform-infrastructure-system-user
-    # Permissions: public_repo, read:org
+    # DOCS: https://registry.terraform.io/providers/integrations/github/latest/docs
+    # ENVS: GITHUB_TOKEN
+    # CRED: https://github.com/settings/tokens/1270530699
+    # USER: terraform-infrastructure-system-user
+    # PERM: public_repo, read:org
     github = {
       source = "integrations/github"
     }
 
-    # https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-    # https://login.tailscale.com/admin/settings/keys
-    # TAILSCALE_API_KEY, TAILSCALE_TAILNET
+    # DOCS: https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
+    # ENVS: TAILSCALE_API_KEY, TAILSCALE_TAILNET
+    # CRED: https://login.tailscale.com/admin/settings/keys
     tailscale = {
       source = "tailscale/tailscale"
     }
