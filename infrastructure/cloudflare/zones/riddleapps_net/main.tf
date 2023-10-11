@@ -1,6 +1,6 @@
-data "cloudflare_zone" "zone" {
-  name = "riddleapps.net"
-}
+# data "cloudflare_zone" "zone" {
+#   name = "riddleapps.net"
+# }
 
 # resource "cloudflare_record" "riddleapps_net_nx15310_your_storageshare_de" {
 #   count = 1

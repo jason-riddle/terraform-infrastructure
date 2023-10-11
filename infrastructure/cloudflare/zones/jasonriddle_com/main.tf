@@ -1,6 +1,6 @@
-data "cloudflare_zone" "zone" {
-  name = "jasonriddle.com"
-}
+# data "cloudflare_zone" "zone" {
+#   name = "jasonriddle.com"
+# }
 
 # resource "cloudflare_page_rule" "wp_admin" {
 #   count = 1
