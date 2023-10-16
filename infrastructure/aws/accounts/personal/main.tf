@@ -1,3 +1,4 @@
+# https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-user
 module "iam_user1" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-user"
   version = "5.30.0"
@@ -8,6 +9,7 @@ module "iam_user1" {
   create_iam_access_key         = false
 }
 
+# https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-group-with-policies
 module "group" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
   version = "5.30.0"
