@@ -38,7 +38,7 @@ module "iam_github_oidc_role" {
   subjects = [
     # You can prepend with `repo:` but it is not required
     "repo:terraform-aws-modules/terraform-aws-iam:pull_request",
-    "terraform-aws-modules/terraform-aws-iam:ref:refs/heads/master",
+    "repo:terraform-aws-modules/terraform-aws-iam:ref:refs/heads/master",
   ]
 
   policies = {
