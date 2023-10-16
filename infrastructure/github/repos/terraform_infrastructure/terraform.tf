@@ -1,10 +1,12 @@
 terraform {
   required_providers {
-    # DOCS: https://registry.terraform.io/providers/tailscale/tailscale/latest/docs
-    # ENVS: TAILSCALE_API_KEY, TAILSCALE_TAILNET
-    # CRED: https://login.tailscale.com/admin/settings/keys
-    tailscale = {
-      source = "tailscale/tailscale"
+    # DOCS: https://registry.terraform.io/providers/integrations/github/latest/docs
+    # ENVS: GITHUB_TOKEN
+    # CRED: https://github.com/settings/tokens/1270530699
+    # USER: terraform-infrastructure-system-user
+    # PERM: public_repo, read:org
+    github = {
+      source = "integrations/github"
     }
   }
 }
