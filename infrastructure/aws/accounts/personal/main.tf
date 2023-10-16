@@ -21,28 +21,27 @@ module "group" {
   ]
 }
 
+# https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-github-oidc-provider
 module "iam_github_oidc_provider" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-github-oidc-provider"
   version = "5.30.0"
 }
 
-# module "iam_github_oidc_role" {
-#   source  = "terraform-aws-modules/iam/aws//modules/iam-github-oidc-role"
-#   version = "5.30.0"
+# https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-github-oidc-role
+module "iam_github_oidc_role" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-github-oidc-role"
+  version = "5.30.0"
 
-#   name = local.name
+  name = "testoidcrole"
 
-#   # This should be updated to suit your organization, repository, references/branches, etc.
-#   subjects = [
-#     # You can prepend with `repo:` but it is not required
-#     "repo:terraform-aws-modules/terraform-aws-iam:pull_request",
-#     "terraform-aws-modules/terraform-aws-iam:ref:refs/heads/master",
-#   ]
+  # This should be updated to suit your organization, repository, references/branches, etc.
+  subjects = [
+    # You can prepend with `repo:` but it is not required
+    "repo:terraform-aws-modules/terraform-aws-iam:pull_request",
+    "terraform-aws-modules/terraform-aws-iam:ref:refs/heads/master",
+  ]
 
-#   policies = {
-#     additional = aws_iam_policy.additional.arn
-#     S3ReadOnly = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
-#   }
-
-#   tags = local.tags
-# }
+  policies = {
+    S3ReadOnly = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+  }
+}
