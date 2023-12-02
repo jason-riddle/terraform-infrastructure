@@ -36,19 +36,19 @@ output "github_actions_homelab_authkey" {
 
 # Not Ephemeral
 
-resource "tailscale_tailnet_key" "pi_cluster_authkey" {
-  count = 1
+# resource "tailscale_tailnet_key" "pi_cluster_authkey" {
+#   count = 1
 
-  description = "Pi Cluster Authkey"
+#   description = "Pi Cluster Authkey"
 
-  reusable      = true
-  ephemeral     = false
-  preauthorized = true
-  expiry        = 7776000 # 90 Days
-  tags          = ["tag:pi-cluster"]
-}
+#   reusable      = true
+#   ephemeral     = false
+#   preauthorized = true
+#   expiry        = 7776000 # 90 Days
+#   tags          = ["tag:pi-cluster"]
+# }
 
-output "pi_cluster_authkey" {
-  value     = tailscale_tailnet_key.pi_cluster_authkey[0].key
-  sensitive = true
-}
+# output "pi_cluster_authkey" {
+#   value     = tailscale_tailnet_key.pi_cluster_authkey[0].key
+#   sensitive = true
+# }
