@@ -23,11 +23,11 @@ module "gh_terraform_infrastructure" {
 }
 
 # Tailscale
-module "ts_jasonriddle11_gmail_com" {
-  source = "./tailscale/tailnets/jasonriddle11_gmail_com"
-}
+# module "ts_jasonriddle11_gmail_com" {
+#   source = "./tailscale/tailnets/jasonriddle11_gmail_com"
+# }
 
-output "ts_pi_cluster_authkey" {
-  value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
-  sensitive = true
-}
+# output "ts_pi_cluster_authkey" {
+#   value     = module.ts_jasonriddle11_gmail_com.pi_cluster_authkey
+#   sensitive = true
+# }
