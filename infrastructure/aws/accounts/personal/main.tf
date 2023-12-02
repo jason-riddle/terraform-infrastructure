@@ -10,16 +10,16 @@ module "iam_user1" {
 }
 
 # https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-group-with-policies
-module "group" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
-  version = "5.30.0"
+# module "group" {
+#   source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
+#   version = "5.30.0"
 
-  name = "testgroup"
+#   name = "testgroup"
 
-  group_users = [
-    module.iam_user1.iam_user_name,
-  ]
-}
+#   group_users = [
+#     module.iam_user1.iam_user_name,
+#   ]
+# }
 
 # https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-github-oidc-provider
 # module "iam_github_oidc_provider" {
